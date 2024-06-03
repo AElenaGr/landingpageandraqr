@@ -52,3 +52,62 @@
   max-width: none;
   line-height: var(--line-height-loose);
 }
+
+
+/* ............................................................................... */
+
+/* ESTILO FORMULARIO Y FOTO */
+
+/* src/components/index.module.css */
+
+.layoute {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Ajusta esta altura según sea necesario */
+  text-align: center;
+}
+
+.textCenter {
+  margin-bottom: 20px; /* Ajusta el margen según sea necesario */
+}
+
+.botones {
+  margin-top: 20px; /* Ajusta el margen según sea necesario */
+}
+
+
+
+/* botones */
+
+
+/* src/components/index.module.css */
+
+.layoute {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Ajusta esta altura según sea necesario */
+  text-align: center;
+}
+
+.textCenter {
+  margin-bottom: 20px; /* Ajusta el margen según sea necesario */
+}
+
+.botones {
+  margin-top: 20px; /* Ajusta el margen según sea necesario */
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Ajusta el espacio entre los botones según sea necesario */
+}
+
+
+.logo {
+  margin-bottom: 0; /* Esto eliminará el espacio entre la imagen y el layout */
+}

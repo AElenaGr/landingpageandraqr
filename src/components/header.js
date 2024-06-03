@@ -1,5 +1,7 @@
-import * as React from "react"
-import { Link } from "gatsby"
+import * as React from "react";
+import { Link } from "gatsby";
+import "./layout.css"; // Asegúrate de que tu CSS esté importado
+import { StaticImage } from 'gatsby-plugin-image';
 
 const Header = ({ siteTitle }) => (
   <header
@@ -9,19 +11,36 @@ const Header = ({ siteTitle }) => (
       display: `flex`,
       alignItems: `center`,
       justifyContent: `space-between`,
+      flexDirection: `column` // Cambia la dirección del flex para alinear elementos en columna
     }}
   >
-    <Link
-      to="/"
+    <div
       style={{
-        fontSize: `var(--font-sm)`,
-        textDecoration: `none`,
+        display: `flex`,
+        justifyContent: `center`,
+        width: `100%`,
       }}
     >
-      {siteTitle}
-    </Link>
-    
-  </header>
-)
 
-export default Header
+{/* ARRIBA DEL TODO  */}
+
+
+{/* <StaticImage
+          src="../images/logopn.png"
+          loading="eager"
+          width={250}
+          quality={95}
+          formats={['auto', 'webp', 'avif']}
+          alt=""
+          style={{ marginBottom: `var(--space-3)` }}
+        /> */}
+
+
+      {/* <img src="../src/images/logpn.png" alt="PN" style={{ height: `50px` }} /> Ajusta el tamaño según sea necesario */}
+
+
+    </div>
+  </header>
+);
+
+export default Header;

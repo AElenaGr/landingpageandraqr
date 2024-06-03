@@ -1,32 +1,72 @@
+// src/pages/index.js
 import * as React from "react"
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-
+// import InstitutionalInfo from '../components/InstitutionalInfo';
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import * as styles from "../components/index.module.css"
-import AlertButton from "../components/button1/button1"
 
-const links = []
+import AlertButton from "../components/button/button"
+import AlertButton2 from "../components/buttoninstitucional"
 
-const samplePageLinks = []
+import CollapseContacto from "../components/collapsecontacto"
+// import ModalApp from "../components/modal"
+import CarousselApp from "../components/caroussel"
+
+const links = [
+  // {
+  //   text: "Tutorial",
+  //   url: "https://www.gatsbyjs.com/docs/tutorial",
+  //   description:
+  //     "Un gran lugar para comenzar si eres nuevo en el desarrollo web. Diseñado para guiarte a través de la configuración de tu primer sitio Gatsby.",
+  // },
+  // {
+  //   text: "Ejemplos",
+  //   url: "https://github.com/gatsbyjs/gatsby/tree/master/examples",
+  //   description:
+  //     "Una colección de sitios web que van desde muy básicos hasta complejos/completos que ilustran cómo realizar tareas específicas dentro de tus sitios Gatsby.",
+  // },
+  // {
+  //   text: "Biblioteca de Plugins",
+  //   url: "https://www.gatsbyjs.com/plugins",
+  //   description:
+  //     "Aprende a agregar funcionalidad y personalizar tu sitio o aplicación Gatsby con miles de plugins creados por nuestra increíble comunidad de desarrolladores.",
+  // },
+  // {
+  //   text: "Construir y Hospedar",
+  //   url: "https://www.gatsbyjs.com/cloud",
+  //   description:
+  //     "¡Ahora estás listo para mostrarle al mundo! Dale superpoderes a tu sitio Gatsby: Construye y hospeda en Gatsby Cloud. ¡Empieza gratis!",
+  // },
+]
+
+const samplePageLinks = [
+  {
+    text: "Página 2",
+    url: "page-2",
+    badge: false,
+    description:
+      "Un ejemplo simple de cómo enlazar a otra página dentro de un sitio Gatsby",
+  },
+  { text: "TypeScript", url: "using-typescript" },
+  { text: "Renderizado del lado del servidor", url: "using-ssr" },
+  { text: "Generación Estática Diferida", url: "using-dsg" },
+]
 
 const moreLinks = [
-  {
-    text: "Política de privacidad",
-    url: "https://www.patrimonionacional.es/politica-de-privacidad",
-  },
+  { text: "Aviso legal", url: "https://gatsby.dev/discord" },
   {
     text: "Accesibilidad",
-    url: "https://www.patrimonionacional.es/accesibilidad",
+    url: "https://gatsbyjs.com/docs/",
   },
   {
-    text: "Politica de cookies",
-    url: "https://www.patrimonionacional.es/politica-de-cookies",
+    text: "Política de cookies",
+    url: "https://gatsbyjs.com/starters/",
   },
   {
-    text: "Aviso legal",
-    url: "https://www.patrimonionacional.es/aviso-legal",
+    text: "Política de privacidad",
+    url: "https://gatsbyjs.com/showcase/",
   },
 ]
 
@@ -34,63 +74,39 @@ const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=de
 
 const IndexPage = () => (
   <Layout>
-    
-    <div className={styles.textCenter}>
-      <StaticImage
-        src="../images/logopn2.png"
-        loading="eager"
-        width={150}
-        quality={100}
-        formats={["auto", "webp", "avif"]}
-        alt=""
-        style={{ marginBottom: `var(--space-3)` }}
-      />
-      <h1>
-        Acceso <b id="empleadosacceso">empleados</b>
+    {/* <ModalApp /> */}
+    <div className={styles.layoute}>
+      <div className={styles.logo}>
+        <StaticImage
+          src="../images/pn.png"
+          loading="eager"
+          width={150}
+          quality={95}
+          formats={["auto", "webp", "avif"]}
+          alt=""
+          style={{ marginBottom: `var(--space-3)` }}
+        />
+      </div>
+      <h1 className={styles.titulo}>
+        GENERADOR QR
+        {/* Empleados de Patrimonio Nacional */}
       </h1>
+
+
+      
+      <div className={styles.textCenter}>
+        <CarousselApp />
+      </div>
+      <div className={styles.botones}>
+        <div className={styles.buttonContainer}>
+          <AlertButton message="inicio sesion">Acceso empleados</AlertButton>
+          <AlertButton2 />
+        </div>
+      </div>
     </div>
-
-
-    <div className="botones">
-      <AlertButton message="inicio sesion"> Acceso empleados </AlertButton>
-
-      <br></br>
-      <AlertButton message="patrimonio nacional">
-        {" "}
-        Información institucional{" "}
-      </AlertButton>
-    </div>
-
-
-    
-    <ul className={styles.list}>
-      {links.map(link => (
-        <li key={link.url} className={styles.listItem}>
-          <a
-            className={styles.listItemLink}
-            href={`${link.url}${utmParameters}`}
-          >
-            {link.text} ↗
-          </a>
-          <p className={styles.listItemDescription}>{link.description}</p>
-        </li>
-      ))}
-    </ul>
-    {moreLinks.map((link, i) => (
-      <React.Fragment key={link.url}>
-        <a href={`${link.url}${utmParameters}`}>{link.text}</a>
-        {i !== moreLinks.length - 1 && <> · </>}
-      </React.Fragment>
-    ))}
-    
+    <CollapseContacto />
   </Layout>
 )
 
-/**
- * Head export to define metadata for the page
- *
- * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
- */
-export const Head = () => <Seo title="Home" />
-
+export const Head = () => <Seo title="Inicio" />
 export default IndexPage
