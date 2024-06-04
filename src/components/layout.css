@@ -44,7 +44,7 @@ body {
   font-weight: normal;
   margin: 0;
   word-wrap: break-word;
-  background-image: url("../images/inicio-ordena.png");
+  background-image: url("../images/ffuente.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -341,7 +341,11 @@ footer a {
   box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.3);
 }
 
-
+.card{
+  
+  border: 1px solid black; /* Bordes con línea negra */
+  background: linear-gradient(180deg, white, beige); 
+}
 
 /* Agregar estilos específicos para el carrusel */
 .carousel {

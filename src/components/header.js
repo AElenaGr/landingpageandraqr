@@ -11,35 +11,23 @@ const Header = ({ siteTitle }) => (
       display: `flex`,
       alignItems: `center`,
       justifyContent: `space-between`,
-      flexDirection: `column` // Cambia la dirección del flex para alinear elementos en columna
+      backgroundColor: `white`, // Banda blanca
+      width: `100%`, // Asegura que el header ocupe todo el ancho
+      borderBottom: `1px solid #ddd`, // Línea inferior sutil para separar
     }}
   >
-    <div
-      style={{
-        display: `flex`,
-        justifyContent: `center`,
-        width: `100%`,
-      }}
-    >
-
-{/* ARRIBA DEL TODO  */}
-
-
-{/* <StaticImage
-          src="../images/logopn.png"
-          loading="eager"
-          width={250}
-          quality={95}
-          formats={['auto', 'webp', 'avif']}
-          alt=""
-          style={{ marginBottom: `var(--space-3)` }}
-        /> */}
-
-
-      {/* <img src="../src/images/logpn.png" alt="PN" style={{ height: `50px` }} /> Ajusta el tamaño según sea necesario */}
-
-
-    </div>
+    <Link to="/" style={{ display: `flex`, alignItems: `center` }}>
+      <StaticImage
+        src="../images/pn.png"
+        loading="eager"
+        width={90} // Ajusta el tamaño según sea necesario
+        quality={95}
+        formats={['auto', 'webp', 'avif']}
+        alt="Logo PN"
+        style={{ marginRight: `var(--space-3)` }} // Espacio entre logo y título
+      />
+      <h1 style={{ margin: 0 }}>{}</h1> {/* Añadir el título del sitio si es necesario */}
+    </Link>
   </header>
 );
 

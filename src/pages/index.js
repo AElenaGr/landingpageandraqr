@@ -7,8 +7,8 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import * as styles from "../components/index.module.css"
 import TandemButton from "../components/button"
-
-import Inicio from "../components/qr"
+import Header from "../components/header"
+// import Inicio from "../components/qr"
 import CollapseContacto from "../components/collapsecontacto"
 // import ModalApp from "../components/modal"
 import CarousselApp from "../components/caroussel"
@@ -72,11 +72,12 @@ const moreLinks = [
 const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
 
 const IndexPage = () => (
+  
   <Layout>
     {/* <ModalApp /> */}
     <div className={styles.layoute}>
       <div className={styles.logo}>
-        <StaticImage
+        {/* <StaticImage
           src="../images/pn.png"
           loading="eager"
           width={150}
@@ -84,7 +85,7 @@ const IndexPage = () => (
           formats={["auto", "webp", "avif"]}
           alt=""
           style={{ marginBottom: `var(--space-3)` }}
-        />
+        /> */}
       </div>
       <h1 className={styles.titulo}>
         GENERADOR QR

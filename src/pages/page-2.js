@@ -4,6 +4,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import "../components/layout.css"
 import TandemButton from "../components/button";
 
+
 function Inicio(){
   return(
 <Layout>
@@ -19,7 +20,7 @@ function Inicio(){
         style={{ marginBottom: `var(--space-3)` }}
       />
       <br></br>
-    <TandemButton enlace="crear-qr" >Crear QR</TandemButton>
+    <TandemButton enlace="/crear-qr" >Crear QR</TandemButton>
   </div>
   
   <div className="qrarchivo">
