@@ -341,27 +341,119 @@ footer a {
   box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.3);
 }
 
-@media (max-width: 400px) {
-  body {
-    background-color: purple;
-  }
-
-  footer {
-    margin: auto;
-    padding: 1em;
-  }
-
-  .button {
-    flex-direction: column;
-    width: 250px; /* Ancho fijo para todos los botones */
-    height: 300px;
 
 
-    
-  }
+/* Agregar estilos específicos para el carrusel */
+.carousel {
+  width: 100%; /* Carrusel ocupa el 100% del contenedor */
+  max-width: 1200px; /* Máximo ancho del carrusel */
+  margin: auto; /* Centrar el carrusel */
+}
+
+.carousel-item img {
+  max-width: 100%; /* Imágenes dentro del carrusel ocupan el 100% del ancho disponible */
+  height: auto; /* Altura automática para mantener la relación de aspecto */
+}
+
+/* Ajustes para los controles del carrusel */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%; /* Ancho de los botones de navegación */
+}
+
+/* Otras reglas de estilo adicionales según sea necesario */
+
+.infoinst{
+  background-color: antiquewhite;
+  padding: 2em;
+  text-align: justify;
+  font-size: .80em;
 }
 
 
-/* carrousel */
 
-.carousel-item img { width: 1200px; height: 400px; }
+/* QR  */
+
+.qrinicio{
+  background-color: antiquewhite;
+  padding: 2em;
+  align-items: center;
+  text-align: center;
+  margin: 2em;
+}
+.qrarchivo{
+  background-color: antiquewhite;
+  padding: 2em;
+  align-items: center;
+  text-align: center;
+  margin: 2em;
+}
+
+
+
+
+
+
+
+/* MEDIA QUERY */
+
+/* Media Queries */
+@media screen and (mi-width: 400px) {
+  .header {
+    font-size: 1.2em;
+  }
+
+  .nav-menu {
+    display: none;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 10px;
+  }
+
+  .footer-left, .footer-right {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .footer-icons {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .botones {
+    flex-direction: column;
+    padding: 2em;
+  }
+
+  .button {
+    width: 300%;
+    max-width: 300px; /* Limitar el ancho máximo */
+  }
+
+  .institutional-info {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  /* Añade aquí otras reglas de estilo para componentes adicionales */
+}
+
+/* carrousel */
+.carousel-item img { 
+  width: 100%; 
+  height: auto; 
+}
+
+/* Estilos específicos para pantallas pequeñas */
+.carousel {
+  max-width: 90%; /* Por ejemplo, ajuste el ancho máximo del carrusel en pantallas pequeñas */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 10%; /* Por ejemplo, ajuste el ancho de los botones de navegación en pantallas pequeñas */
+}

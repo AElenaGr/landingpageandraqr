@@ -6,10 +6,9 @@ import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import * as styles from "../components/index.module.css"
+import TandemButton from "../components/button"
 
-import AlertButton from "../components/button/button"
-import AlertButton2 from "../components/buttoninstitucional"
-
+import Inicio from "../components/qr"
 import CollapseContacto from "../components/collapsecontacto"
 // import ModalApp from "../components/modal"
 import CarousselApp from "../components/caroussel"
@@ -99,8 +98,8 @@ const IndexPage = () => (
       </div>
       <div className={styles.botones}>
         <div className={styles.buttonContainer}>
-          <AlertButton message="inicio sesion">Acceso empleados</AlertButton>
-          <AlertButton2 />
+        <TandemButton enlace="page-2" >Acceso QR</TandemButton>
+        <TandemButton enlace="page-3" >Información institucional</TandemButton>
         </div>
       </div>
     </div>
