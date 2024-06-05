@@ -6,7 +6,7 @@ import MyComponent from "../components/crearqr-componentes/componente1";
 import TandemButton from "../components/button";
 import { StaticImage } from "gatsby-plugin-image";
 import QRCode from 'qrcode.react';
-import { toPng } from 'html-to-image';
+import { toPng, toJpeg, toSvg } from 'html-to-image';
 import download from 'downloadjs';
 function Crearqr() {
   const [inputValue, setInputValue] = useState('');
@@ -22,12 +22,29 @@ function Crearqr() {
   const handleSizeChange = (size) => {
     setQrSize(parseInt(size, 10));
   };
+
+  // descargarrrrrr //
   const handleDownload = async () => {
     if (qrRef.current) {
       const dataUrl = await toPng(qrRef.current);
       download(dataUrl, 'qr-code.png');
     }
   };
+
+  const handleDownload2 = async () => {
+    if (qrRef.current) {
+      const dataUrl = await toJpeg(qrRef.current);
+      download(dataUrl, 'qr-code.jpeg');
+    }
+  };
+
+  const handleDownload3 = async () => {
+    if (qrRef.current) {
+      const dataUrl = await toSvg(qrRef.current);
+      download(dataUrl, 'qr-code.svg');
+    }
+  };
+
   const containerStyle = {
     backgroundColor: "beige",
     border: "2px solid black",
@@ -41,7 +58,7 @@ function Crearqr() {
       <div style={containerStyle}>
         <h1>GENERADOR DE QR</h1>
         
-        <Collapse2 />
+        <Collapse2/>
         <br />
         <p>Introduce tu texto o url aquí:</p>
         <input type="text" value={inputValue} onChange={handleInputChange} />
@@ -57,7 +74,9 @@ function Crearqr() {
         <br />
         {/* <TandemButton enlace="#">Generar QR</TandemButton> */}
         <br />
-        <button className="button" onClick={handleDownload}>Descargar QR</button>
+        <button className="button" onClick={handleDownload}>Descargar QR png</button>
+        <button className="button" onClick={handleDownload2}>Descargar QR jpg</button>
+        <button className="button" onClick={handleDownload3}>Descargar QR svg</button>
       </div>
     </Layout>
   );

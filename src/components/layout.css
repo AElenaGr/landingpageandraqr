@@ -407,6 +407,38 @@ footer a {
   object-fit: cover; /* Ensure the image covers the entire area without distortion */
 }
 
+/* .accordion-title {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #A49A7a;
+  border: 1px solid #a95252;
+  transition: background-color 0.3s;
+}
+
+.accordion-title:hover {
+  background-color: #e1e1e1;
+}
+
+.accordion-content {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-top: none;
+} */
+
+.accordion-header {
+  cursor: pointer;
+  background-color: #A69C86;
+  border-radius: 20px;
+}
+
+
+.accordion-header:hover {
+  color: whitesmoke;
+
+  
+}
 
 
 /* MEDIA QUERY */
