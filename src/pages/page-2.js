@@ -3,6 +3,7 @@ import Layout from "../components/layout"
 import { StaticImage } from "gatsby-plugin-image"
 import "../components/layout.css"
 import TandemButton from "../components/button";
+// import Crearqr from "./crear-qr";
 
 
 function Inicio(){
@@ -11,7 +12,7 @@ function Inicio(){
   <div className="qrinicio">
     <h1>GENERADOR DE QR</h1>
   <StaticImage
-        src="./images/qr-code.png"
+        src="../images/qr-code.png"
         loading="eager"
         width={250}
         quality={95}
