@@ -5,7 +5,7 @@ import { StaticImage } from "gatsby-plugin-image"
 // import InstitutionalInfo from '../components/InstitutionalInfo';
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import * as styles from "../components/index.module.css"
+import * as styles from "../components/layout.css"
 import TandemButton from "../components/button"
 import Header from "../components/header"
 // import Inicio from "../components/qr"
