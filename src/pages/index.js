@@ -13,6 +13,10 @@ import CollapseContacto from "../components/collapsecontacto"
 // import ModalApp from "../components/modal"
 import CarousselApp from "../components/caroussel"
 // import styles from '../components/index.module.css';
+// index.js
+
+// index.js
+import { layoute, logo, titulo, textCenter, botones, buttonContainer } from '../components/layout.css';
 
 const links = [
   // {
