@@ -111,3 +111,10 @@
 .logo {
   margin-bottom: 0; /* Esto eliminará el espacio entre la imagen y el layout */
 }
+
+
+.titulo {
+  font-size: 2rem; /* Example style */
+  color: #333; /* Example style */
+  margin-bottom: 1rem; /* Example style */
+}
