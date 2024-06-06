@@ -435,28 +435,6 @@ footer a {
 
 /* ............................................................................... */
 
-/* ESTILO FORMULARIO Y FOTO */
-
-/* src/components/index.module.css */
-
-.layoute {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh; /* Ajusta esta altura según sea necesario */
-  text-align: center;
-}
-
-.textCenter {
-  margin-bottom: 20px; /* Ajusta el margen según sea necesario */
-}
-
-.botones {
-  margin-top: 20px; /* Ajusta el margen según sea necesario */
-}
-
-
 
 /* botones */
 
@@ -497,15 +475,6 @@ footer a {
   color: #333; /* Example style */
   margin-bottom: 1rem; /* Example style */
 }
-
-
-
-
-
-
-
-
-
 
 
 
