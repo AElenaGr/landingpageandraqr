@@ -1,14 +1,13 @@
+/* Definiciones de variables */
 :root {
   --border-radius: 4px;
   --color-text: #333;
   --color-primary: #7026b9;
   --color-code-bg: #fff4db;
   --color-code: #8a6534;
-  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
-    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-  --font-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
-    "Courier New", monospace;
-  --font-title: "Playfair Display", serif; /* Fuente para el título */
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  --font-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-title: "Playfair Display", serif;
   --font-lg: 18px;
   --font-md: 16px;
   --font-sm: 14px;
@@ -27,6 +26,7 @@
   --size-gap: var(--space-6);
 }
 
+/* Estilos para el HTML y el cuerpo */
 html {
   -webkit-text-size-adjust: 100%;
   box-sizing: border-box;
@@ -49,6 +49,7 @@ body {
   background-size: cover;
 }
 
+/* Estilos para enlaces */
 a {
   background-color: transparent;
   color: var(--color-primary);
@@ -65,218 +66,47 @@ a:hover {
   text-decoration: none;
 }
 
-abbr[title] {
-  border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
-  cursor: help;
-  text-decoration: none;
-}
-
-b,
-strong {
+/* Estilos para elementos de texto */
+b, strong {
   font-weight: inherit;
   font-weight: bolder;
 }
 
-dfn {
-  font-style: italic;
-}
-
+/* Estilos para encabezados */
 h1 {
   margin: 0;
   margin-bottom: 3rem;
   padding: 0;
   line-height: var(--line-height-dense);
   letter-spacing: -0.01em;
-  font-family: var(--font-title); /* Aplicar la nueva fuente al título */
-  font-family: "Courier New", Courier, monospace;
+  font-family: var(--font-title);
 }
 
 h1 > b {
   color: var(--color-primary);
 }
 
+/* Estilos para imágenes */
 img {
   border-style: none;
   max-width: 100%;
 }
 
-code,
-kbd,
-pre,
-samp {
-  font-family: var(--font-mono);
-  font-size: 1em;
-  line-height: inherit;
-}
+/* Otras definiciones de estilo según sea necesario */
 
-hr {
-  box-sizing: content-box;
-  overflow: visible;
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding: 0;
-  margin-bottom: calc(var(--space-4) - 1px);
-  background: hsla(0, 0%, 0%, 0.2);
-  border: none;
-  height: 1px;
-}
-
-* {
-  box-sizing: inherit;
-}
-
-*:before {
-  box-sizing: inherit;
-}
-
-*:after {
-  box-sizing: inherit;
-}
-
-hgroup,
-img,
-figure,
-fieldset,
-ul,
-ol,
-dl,
-dd,
-p {
-  margin: 0;
-  padding: 0;
-  margin-bottom: var(--space-4);
-}
-
-ul,
-ol {
-  margin-left: var(--space-4);
-  list-style-position: outside;
-  list-style-image: none;
-}
-
-pre {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  margin-bottom: var(--space-4);
-  font-size: 0.875rem;
-  line-height: var(--line-height-normal);
-  background: hsla(0, 0%, 0%, 0.04);
-  border-radius: var(--border-radius);
-  overflow: auto;
-  word-wrap: normal;
-  padding: var(--space-4);
-}
-
-b,
-strong,
-dt,
-th {
-  font-weight: bold;
-}
-
-li {
-  margin-bottom: calc(var(--space-4) / 2);
-}
-
-ol li,
-ul li {
-  padding-left: 0;
-}
-
-li > ol,
-li > ul {
-  margin-bottom: calc(var(--space-4) / 2);
-  margin-left: var(--space-4);
-  margin-top: calc(var(--space-4) / 2);
-}
-
-blockquote *:last-child {
-  margin-bottom: 0;
-}
-
-li *:last-child {
-  margin-bottom: 0;
-}
-
-p *:last-child {
-  margin-bottom: 0;
-}
-
-li > p {
-  margin-bottom: calc(var(--space-4) / 2);
-}
-
-p {
-  max-width: 680px;
-}
-
-code {
-  font-size: 0.875rem;
-}
-
-kbd {
-  font-size: 0.875rem;
-}
-
-samp {
-  font-size: 0.875rem;
-}
-
-abbr {
-  border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
-  cursor: help;
-}
-
-acronym {
-  border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
-  cursor: help;
-}
-
-tt,
-code {
-  background-color: var(--color-code-bg);
-  border-radius: var(--border-radius);
-  color: var(--color-code);
-  font-family: var(--font-mono);
-  padding-bottom: 0.25em;
-  padding-top: 0.25em;
-  word-break: normal;
-}
-
-pre code {
-  background: none;
-}
-
-code:before,
-code:after,
-tt:before,
-tt:after {
-  content: "\00a0";
-  letter-spacing: -0.2em;
-}
-
-pre code:before,
-pre code:after,
-pre tt:before,
-pre tt:after {
-  content: none;
-}
-
-/* FOOTER  */
+/* Estilos específicos para el pie de página */
 footer {
   background-image: linear-gradient(to right, rgb(222, 208, 208), #6c673a);
   color: #6c673a;
-  padding: 20px; /* Agrega padding para un poco de espacio interior */
-  display: flex; /* Usar flexbox para organizar el contenido */
-  justify-content: space-between; /* Espaciar elementos */
-  flex-wrap: wrap; /* Permitir que los elementos se envuelvan */
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 footer a {
   color: #363022;
-  margin-right: 10px; /* Espacio entre enlaces */
+  margin-right: 10px;
 }
 
 .footer-left {
@@ -291,15 +121,15 @@ footer a {
 
 .footer-icons {
   display: flex;
-  gap: 10px; /* Espacio entre iconos */
+  gap: 10px;
 }
 
 .footer-icons img {
-  width: 24px; /* Tamaño de los iconos */
+  width: 24px;
   height: 24px;
 }
-/* ENDFOOTER  */
 
+/* Estilos para los botones */
 .botones {
   background-image: url("../images/Fuente.jpg");
   text-align: center;
@@ -307,248 +137,60 @@ footer a {
   background-repeat: no-repeat;
   background-size: cover;
   align-items: center;
-  display: flex; /* Usar flexbox para alinear los botones en línea */
-  justify-content: center; /* Centrar los botones horizontalmente */
-  gap: 1em; /* Espacio entre los botones */
+  display: flex;
+  justify-content: center;
+  gap: 1em;
 }
 
 .button {
-  margin: 0; /* Remover margen */
-  padding: 0.5em; /* Reducir el padding */
-  border-radius: 8px; /* Redondear los bordes */
-  background-color: #a59a80!important; /* Color de fondo para un estilo más serio */
-  color: white; /* Color del texto */
-  border: 3px solid #e6edf5; /* Bordes negros */
+  margin: 0;
+  padding: 0.5em;
+  border-radius: 8px;
+  background-color: #a59a80!important;
+  color: white;
+  border: 3px solid #e6edf5;
   cursor: pointer;
-  transition: background-color 0.3s ease; /* Transición para el hover */
-  box-shadow: 2px 2px 5px #e6edf5; /* Sombra para efecto de relieve */
-  width: 250px; /* Ancho fijo para todos los botones */
-  height: 50px; /* Alto fijo para todos los botones */
+  transition: background-color 0.3s ease;
+  box-shadow: 2px 2px 5px #e6edf5;
+  width: 250px;
+  height: 50px;
   text-decoration: none;
 }
 
 .button:hover {
-  background-color: #add8e6!important; /* Azul claro en hover */
+  background-color: #add8e6!important;
 }
 
-/* .a {
-  margin: 1em;
-} */
-
-/* CAJA */
+/* Estilos para la caja */
 .layoute {
   background-color: #e6edf5;
   box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.3);
 }
 
-.card{
-  
-  border: 1px solid black; /* Bordes con línea negra */
+.card {
+  border: 1px solid black;
   background: linear-gradient(180deg, white, beige); 
 }
 
-/* Agregar estilos específicos para el carrusel */
+/* Estilos para el carrusel */
 .carousel {
-  width: 100%; /* Carrusel ocupa el 100% del contenedor */
-  max-width: 1200px; /* Máximo ancho del carrusel */
-  margin: auto; /* Centrar el carrusel */
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .carousel-item img {
-  max-width: 100%; /* Imágenes dentro del carrusel ocupan el 100% del ancho disponible */
-  height: auto; /* Altura automática para mantener la relación de aspecto */
+  max-width: 100%;
+  height: auto;
 }
 
-/* Ajustes para los controles del carrusel */
+/* Estilos para los controles del carrusel */
 .carousel-control-prev,
 .carousel-control-next {
-  width: 5%; /* Ancho de los botones de navegación */
+  width: 5%;
 }
 
-/* Otras reglas de estilo adicionales según sea necesario */
-
-.infoinst{
-  background-color: antiquewhite;
-  padding: 2em;
-  text-align: justify;
-  font-size: .80em;
-}
-
-/*  */
-
-
-.list {
-  display: grid;
-  margin: 0;
-  /* https://css-tricks.com/responsive-layouts-fewer-media-queries/ */
-  --w: 280px;
-  --n: 2;
-  gap: var(--size-gap);
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(max(var(--w), 100%/ (var(--n) + 1) + 0.1%), 1fr)
-  );
-  margin-bottom: var(--size-gap);
-  margin-top: var(--size-gap);
-}
-
-.listItem {
-  margin: 0;
-}
-
-.listItem::marker {
-  color: #e95800;
-}
-
-.listItem:nth-child(2)::marker {
-  color: #159bf3;
-}
-
-.listItem:nth-child(3)::marker {
-  color: #8eb814;
-}
-
-.listItem:nth-child(4)::marker {
-  color: #663399;
-}
-
-.listItemLink {
-  color: var(--color-primary);
-  font-weight: bold;
-}
-
-.listItemDescription {
-  color: var(--color-text);
-  margin-bottom: 0;
-  margin-top: var(--space-1);
-}
-
-.textCenter {
-  text-align: center;
-}
-
-.intro {
-  max-width: none;
-  line-height: var(--line-height-loose);
-}
-
-
-/* ............................................................................... */
-
-
-/* botones */
-
-
-/* src/components/index.module.css */
-
-.layoute {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh; /* Ajusta esta altura según sea necesario */
-  text-align: center;
-}
-
-.textCenter {
-  margin-bottom: 20px; /* Ajusta el margen según sea necesario */
-}
-
-.botones {
-  margin-top: 20px; /* Ajusta el margen según sea necesario */
-}
-
-.buttonContainer {
-  display: flex;
-  justify-content: center;
-  gap: 10px; /* Ajusta el espacio entre los botones según sea necesario */
-}
-
-
-.logo {
-  margin-bottom: 0; /* Esto eliminará el espacio entre la imagen y el layout */
-}
-
-
-.titulo {
-  font-size: 2rem; /* Example style */
-  color: #333; /* Example style */
-  margin-bottom: 1rem; /* Example style */
-}
-
-
-
-
-
-
-
-
-/* QR  */
-
-.qrinicio{
-  background-color: antiquewhite;
-  padding: 2em;
-  align-items: center;
-  text-align: center;
-  margin: 2em;
-}
-.qrarchivo{
-  background-color: antiquewhite;
-  padding: 2em;
-  align-items: center;
-  text-align: center;
-  margin: 2em;
-}
-
-
-
-.carouselContainer {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.carouselImage {
-  width: 100%;
-  height: 600px; /* Adjust the height to make it larger */
-  object-fit: cover; /* Ensure the image covers the entire area without distortion */
-}
-
-/* .accordion-title {
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  background-color: #A49A7a;
-  border: 1px solid #a95252;
-  transition: background-color 0.3s;
-}
-
-.accordion-title:hover {
-  background-color: #e1e1e1;
-}
-
-.accordion-content {
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-top: none;
-} */
-
-.accordion-header {
-  cursor: pointer;
-  background-color: #A69C86;
-  border-radius: 20px;
-}
-
-
-.accordion-header:hover {
-  color: whitesmoke;
-
-  
-}
-
-
-/* MEDIA QUERY */
+/* Otras definiciones de estilo según sea necesario */
 
 /* Media Queries */
 @media screen and (mi-width: 400px) {
@@ -584,29 +226,11 @@ footer a {
 
   .button {
     width: 300%;
-    max-width: 300px; /* Limitar el ancho máximo */
+    max-width: 300px;
   }
 
   .institutional-info {
     padding: 10px;
     font-size: 14px;
   }
-
-  /* Añade aquí otras reglas de estilo para componentes adicionales */
-}
-
-/* carrousel */
-.carousel-item img { 
-  width: 100%; 
-  height: auto; 
-}
-
-/* Estilos específicos para pantallas pequeñas */
-.carousel {
-  max-width: 90%; /* Por ejemplo, ajuste el ancho máximo del carrusel en pantallas pequeñas */
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-  width: 10%; /* Por ejemplo, ajuste el ancho de los botones de navegación en pantallas pequeñas */
 }
