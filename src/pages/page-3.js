@@ -1,14 +1,14 @@
-import React from "react";
-import Layout from "../components/layout";
-import "../components/layout.css";
-import Footer from "../components/footer";
-import { StaticImage } from "gatsby-plugin-image";
-// import VolverBoton from "../components/volverboton";
-import Accordion from "../components/accordion";
+import React from 'react';
+import Layout from '../components/layout';
+import '../components/layout.css';
+
+import { StaticImage } from 'gatsby-plugin-image';
+
+import Accordion from '../components/accordion';
 const Info = () => {
   const accordionItems = [
     {
-      title: "DOBLE FUNCIÓN: CONSTITUCIONAL Y CULTURAL",
+      title: 'DOBLE FUNCIÓN: CONSTITUCIONAL Y CULTURAL',
       content: (
         <>
           <p>
@@ -33,7 +33,7 @@ const Info = () => {
       ),
     },
     {
-      title: "PALACIOS Y ESTACIONES DEL AÑO",
+      title: 'PALACIOS Y ESTACIONES DEL AÑO',
       content: (
         <>
           <p>
@@ -51,7 +51,7 @@ const Info = () => {
       ),
     },
     {
-      title: "DESDE LA EDAD MEDIA HASTA HOY",
+      title: 'DESDE LA EDAD MEDIA HASTA HOY',
       content: (
         <>
           <p>
@@ -146,6 +146,7 @@ const Info = () => {
   ];
   return (
     <Layout>
+      
       <div className="infoinst">
         <div className="imagecontainer">
           <StaticImage
@@ -154,11 +155,12 @@ const Info = () => {
             loading="eager"
             width={100}
             quality={100}
-            formats={["auto", "webp", "avif"]}
+            formats={['auto', 'webp', 'avif']}
             alt=""
           />
         </div>
-        <h1>SOBRE PATRIMONIO NACIONAL: CONOCE NUESTRA HISTORIA</h1>
+        <h1>SOBRE PATRIMONIO NACIONAL:
+          CONOCE NUESTRA HISTORIA</h1>
         <p>
           Patrimonio Nacional es un organismo público regulado por una Ley
           específica de 1982, Ley 23/1982, de 16 de junio, heredera de una larga
@@ -171,7 +173,7 @@ const Info = () => {
         </p>
         <Accordion items={accordionItems} />
       </div>
-      
+     
       
     </Layout>
   );

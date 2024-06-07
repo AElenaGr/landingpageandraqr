@@ -1,11 +1,11 @@
 :root {
   --border-radius: 4px;
-  --color-text: #333;
-  --color-primary: #7026b9;
+  --color-text: #5b1b1b;
+  --color-primary: #361194;
   --color-code-bg: #fff4db;
   --color-code: #8a6534;
-  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
-    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  /* --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji"; */
   --font-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
     "Courier New", monospace;
   --font-title: "Playfair Display", serif; /* Fuente para el título */
@@ -26,28 +26,39 @@
   --size-gutter: var(--space-5);
   --size-gap: var(--space-6);
 }
-
 html {
   -webkit-text-size-adjust: 100%;
   box-sizing: border-box;
-  font: sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   font-size: var(--font-md);
   line-height: var(--line-height-normal);
   overflow-y: scroll;
 }
-
 body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  color: var(--color-text);
-  font-family: var(--font-sans);
+  font-family: var(--font-title);
   font-weight: normal;
-  margin: 0;
+  margin: auto;
   word-wrap: break-word;
+  position: relative; /* Importante para el uso de pseudo-elementos */
+}
+
+body::before {
+  content: ""; /* Obligatorio para el uso de pseudo-elementos */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-image: url("../images/ffuente.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  opacity: 0.5; /* Ajusta la opacidad según sea necesario */
+  z-index: -1; /* Asegura que el pseudo-elemento esté detrás del contenido */
 }
+
 
 a {
   background-color: transparent;
@@ -58,29 +69,24 @@ a {
   text-decoration-thickness: 1.5px;
   text-underline-offset: 2px;
 }
-
 a:active,
 a:hover {
   outline-width: 0;
   text-decoration: none;
 }
-
 abbr[title] {
   border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
   cursor: help;
   text-decoration: none;
 }
-
 b,
 strong {
   font-weight: inherit;
   font-weight: bolder;
 }
-
 dfn {
   font-style: italic;
 }
-
 h1 {
   margin: 0;
   margin-bottom: 3rem;
@@ -88,9 +94,10 @@ h1 {
   line-height: var(--line-height-dense);
   letter-spacing: -0.01em;
   font-family: var(--font-title); /* Aplicar la nueva fuente al título */
-  font-family: "Courier New", Courier, monospace;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  text-align: center;
 }
-
 h1 > b {
   color: var(--color-primary);
 }
@@ -99,7 +106,6 @@ img {
   border-style: none;
   max-width: 100%;
 }
-
 code,
 kbd,
 pre,
@@ -108,7 +114,6 @@ samp {
   font-size: 1em;
   line-height: inherit;
 }
-
 hr {
   box-sizing: content-box;
   overflow: visible;
@@ -121,19 +126,15 @@ hr {
   border: none;
   height: 1px;
 }
-
 * {
   box-sizing: inherit;
 }
-
 *:before {
   box-sizing: inherit;
 }
-
 *:after {
   box-sizing: inherit;
 }
-
 hgroup,
 img,
 figure,
@@ -147,14 +148,12 @@ p {
   padding: 0;
   margin-bottom: var(--space-4);
 }
-
 ul,
 ol {
   margin-left: var(--space-4);
   list-style-position: outside;
   list-style-image: none;
 }
-
 pre {
   margin-left: 0;
   margin-right: 0;
@@ -168,38 +167,31 @@ pre {
   word-wrap: normal;
   padding: var(--space-4);
 }
-
 b,
 strong,
 dt,
 th {
   font-weight: bold;
 }
-
 li {
   margin-bottom: calc(var(--space-4) / 2);
 }
-
 ol li,
 ul li {
   padding-left: 0;
 }
-
 li > ol,
 li > ul {
   margin-bottom: calc(var(--space-4) / 2);
   margin-left: var(--space-4);
   margin-top: calc(var(--space-4) / 2);
 }
-
 blockquote *:last-child {
   margin-bottom: 0;
 }
-
 li *:last-child {
   margin-bottom: 0;
 }
-
 p *:last-child {
   margin-bottom: 0;
 }
@@ -291,7 +283,7 @@ footer a {
 
 .footer-icons {
   display: flex;
-  gap: 10px; /* Espacio entre iconos */
+  gap: 15px; /* Espacio entre iconos */
 }
 
 .footer-icons img {
@@ -303,55 +295,95 @@ footer a {
 .botones {
   background-image: url("../images/Fuente.jpg");
   text-align: center;
-  padding: 10em;
+  padding: 5em;
   background-repeat: no-repeat;
   background-size: cover;
-  align-items: center;
   display: flex; /* Usar flexbox para alinear los botones en línea */
-  justify-content: center; /* Centrar los botones horizontalmente */
-  gap: 1em; /* Espacio entre los botones */
+  flex-direction: column; /* Alinear los botones en columna */
+  align-items: center; /* Centrar los elementos verticalmente */
+  justify-content: center; /* Centrar los elementos horizontalmente */
+  gap: 10px; /* Espacio entre los botones */
 }
 
 .button {
   margin: 0; /* Remover margen */
-  padding: 0.5em; /* Reducir el padding */
-  border-radius: 8px; /* Redondear los bordes */
-  background-color: #a59a80!important; /* Color de fondo para un estilo más serio */
-  color: white; /* Color del texto */
-  border: 3px solid #e6edf5; /* Bordes negros */
+  padding: 0.9em; /* Reducir el padding */
+  border-radius: 10px; /* Redondear los bordes */
+  background: radial-gradient(
+    rgba(21, 243, 32, 0.5),
+    #add8e6
+  ) !important; /* Gradiente radial en hover */
+  color: rgb(10, 10, 10); /* Color del texto */
+  border: 3px solid #000000; /* Bordes negros */
   cursor: pointer;
   transition: background-color 0.3s ease; /* Transición para el hover */
-  box-shadow: 2px 2px 5px #e6edf5; /* Sombra para efecto de relieve */
+  box-shadow: 2px 2px 5px #000000; /* Sombra para efecto de relieve */
   width: 250px; /* Ancho fijo para todos los botones */
   height: 50px; /* Alto fijo para todos los botones */
+  text-align: center; /* Alinear el texto horizontalmente */
   text-decoration: none;
 }
 
 .button:hover {
-  background-color: #add8e6!important; /* Azul claro en hover */
+
+  font-style: italic;
+  background-color: #a59a80; /* Color de fondo para un estilo más serio */
 }
 
-/* .a {
-  margin: 1em;
-} */
+/* MAS INFO  */
+
+.more-info-button {
+  font-size: 1.2em;
+  margin-bottom: 1rem;
+  padding: 0.5em 1em;
+  background: radial-gradient(
+    rgba(21, 243, 32, 0.5),
+    #add8e6
+  ); /* Gradiente radial como fondo inicial */
+  border: black; /* Elimina el borde del botón */
+  color: rgb(0, 0, 0); /* Color del texto del botón */
+  cursor: pointer; /* Cambia el cursor al pasar por el botón */
+  transition: all 0.3s ease; /* Transición suave para el hover */
+  border: 3px solid #000000;
+}
+
+.more-info-button:hover {
+  font-style: italic;
+}
+
+.card-body-custom {
+  background: radial-gradient(rgba(243, 236, 21, 0.5), #add8e6);
+  color: black !important; /* Color del texto negro */
+  padding: 1em; /* Espaciado interno */
+  border-radius: 10px; /* Bordes redondeados */
+  font-style: normal;
+}
+
+.text-container {
+  background: radial-gradient(
+    rgba(164, 240, 168, 0.5),
+    #add8e6
+  ); /* Gradiente radial como fondo del contenedor */
+  padding: 1em;
+  border-radius: 10px; /* Bordes redondeados */
+  color: white; /* Color del texto */
+  box-shadow: 0 4px 8px rgba(232, 186, 186, 0.2); /* Sombra para el contenedor */
+}
 
 /* CAJA */
-.layoute {
-  background-color: #e6edf5;
-  box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.3);
-}
 
-.card{
-  
-  border: 1px solid black; /* Bordes con línea negra */
-  background: linear-gradient(180deg, white, beige); 
-}
 
-/* Agregar estilos específicos para el carrusel */
+/* Modificar estilos específicos para el carrusel */
 .carousel {
-  width: 100%; /* Carrusel ocupa el 100% del contenedor */
-  max-width: 1200px; /* Máximo ancho del carrusel */
+  width: 100%; /* El carrusel ocupa el 100% del contenedor */
+  max-width: 1200px; /* Ancho máximo del carrusel */
   margin: auto; /* Centrar el carrusel */
+  background: radial-gradient(
+    rgba(21, 243, 32, 0.5),
+    #add8e6
+  ); /* Degradado radial */
+  padding: 1em;
+  margin-bottom: 2em;
 }
 
 .carousel-item img {
@@ -362,38 +394,81 @@ footer a {
 /* Ajustes para los controles del carrusel */
 .carousel-control-prev,
 .carousel-control-next {
-  width: 5%; /* Ancho de los botones de navegación */
+  width: 8%; /* Ancho de los botones de navegación */
+  font-size: 2em; /* Tamaño del icono de flecha */
+  font-weight: bold; /* Grosor del texto del icono */
 }
 
 /* Otras reglas de estilo adicionales según sea necesario */
-
-.infoinst{
-  background-color: antiquewhite;
+.infoinst {
+  background: radial-gradient(
+    rgba(21, 243, 32, 0.5),
+    #add8e6
+  );
   padding: 2em;
   text-align: justify;
-  font-size: .80em;
+  font-size: 0.8em;
 }
 
+/* ............................................................................... */
+/* botones */
+/* src/components/index.module.css */
+.layoute {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Ajusta esta altura según sea necesario */
+  text-align: center;
+  background-color: #e6edf5;
+  box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.3);
+}
 
+.textCenter {
+  margin-bottom: 20px; /* Ajusta el margen según sea necesario */
+}
+.botones {
+  margin-top: 20px; /* Ajusta el margen según sea necesario */
+}
+.buttonContainer {
+  display: flex;
+  justify-content: center !important ;
+  gap: 10px !important; /* Ajusta el espacio entre los botones según sea necesario */
+}
+
+.logo {
+  margin-bottom: 0; /* Esto eliminará el espacio entre la imagen y el layout */
+}
+.titulo {
+  font-size: 5rem; /* Example style */
+  color: #15328f !important; /* Example style */
+  margin-bottom: 1rem; /* Example style */
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+  padding: 0.5em;
+}
 
 /* QR  */
-
-.qrinicio{
-  background-color: antiquewhite;
+.qrinicio {
+  background: radial-gradient(
+    rgba(21, 243, 32, 0.5),
+    #add8e6
+  );
   padding: 2em;
   align-items: center;
   text-align: center;
   margin: 2em;
 }
-.qrarchivo{
-  background-color: antiquewhite;
+.qrarchivo {
+  background: radial-gradient(
+    rgba(21, 243, 32, 0.5),
+    #add8e6
+  );
   padding: 2em;
   align-items: center;
   text-align: center;
   margin: 2em;
 }
-
-
 
 .carouselContainer {
   width: 100%;
@@ -407,98 +482,103 @@ footer a {
   object-fit: cover; /* Ensure the image covers the entire area without distortion */
 }
 
-/* .accordion-title {
+/* accordion */
+
+
+/* INFORMACION INSTITUCIONAL */
+.infoinst {
+  background-color: antiquewhite;
+  padding: 2em;
+  margin: 2em auto;
+  text-align: center;
+  width: 80%;
+  max-width: 800px;
+  font-size: 18px; 
+  border-radius: 1%;
+}
+
+
+
+.accordion-title {
   cursor: pointer;
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 10px;
-  background-color: #A49A7a;
-  border: 1px solid #a95252;
-  transition: background-color 0.3s;
+  background-color: #a48b7a;
+  border: 1px solid #ddd;
+  border-radius: 0.5em;
+  transition: background-color 0.3s; /* Agrega una transición suave al color de fondo */
 }
 
 .accordion-title:hover {
-  background-color: #e1e1e1;
+  background-color: #b23535; /* Cambia el color de fondo en hover */
 }
 
+div.infoinst .accordion-title:hover {
+  background-color: #b23535 !important;
+}
 .accordion-content {
   padding: 10px;
   border: 1px solid #ddd;
   border-top: none;
-} */
-
-.accordion-header {
-  cursor: pointer;
-  background-color: #A69C86;
-  border-radius: 20px;
 }
 
 
-.accordion-header:hover {
-  color: whitesmoke;
 
-  
+.texto-p {
+
+  background-color: #000000!important;
 }
 
 
 /* MEDIA QUERY */
-
 /* Media Queries */
 @media screen and (mi-width: 400px) {
   .header {
     font-size: 1.2em;
   }
-
   .nav-menu {
     display: none;
   }
-
   footer {
     flex-direction: column;
     align-items: stretch;
     padding: 10px;
   }
-
-  .footer-left, .footer-right {
+  .footer-left,
+  .footer-right {
     width: 100%;
     justify-content: center;
     margin-bottom: 10px;
   }
-
   .footer-icons {
     justify-content: center;
     width: 100%;
   }
-
   .botones {
     flex-direction: column;
     padding: 2em;
   }
-
   .button {
     width: 300%;
     max-width: 300px; /* Limitar el ancho máximo */
   }
-
   .institutional-info {
     padding: 10px;
     font-size: 14px;
   }
-
   /* Añade aquí otras reglas de estilo para componentes adicionales */
 }
-
 /* carrousel */
-.carousel-item img { 
-  width: 100%; 
-  height: auto; 
+.carousel-item img {
+  width: 100%;
+  height: auto;
 }
-
 /* Estilos específicos para pantallas pequeñas */
 .carousel {
   max-width: 90%; /* Por ejemplo, ajuste el ancho máximo del carrusel en pantallas pequeñas */
 }
-
 .carousel-control-prev,
 .carousel-control-next {
   width: 10%; /* Por ejemplo, ajuste el ancho de los botones de navegación en pantallas pequeñas */
