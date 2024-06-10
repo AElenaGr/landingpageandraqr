@@ -1,32 +1,15 @@
-import React, { useState } from 'react';
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
-
-function ModalApp(args) {
-  const [modal, setModal] = useState(false);
-
-  const toggle = () => setModal(!modal);
-
+import React from "react";
+const Modal = ({ show, handleClose, children }) => {
+  if (!show) return null;
   return (
-    <div>
-      <Button color="info" onClick={toggle}>
-        Click Me
-      </Button>
-      <Modal isOpen={modal} toggle={toggle} {...args}>
-        <ModalHeader toggle={toggle}>Modal title</ModalHeader>
-        <ModalBody>
-          shdhhfuhuhfunDXIAEFIF
-        </ModalBody>
-        <ModalFooter>
-          <Button color="primary" onClick={toggle}>
-            Do Something
-          </Button>{' '}
-          <Button color="secondary" onClick={toggle}>
-            Cancel
-          </Button>
-        </ModalFooter>
-      </Modal>
+    <div className="modal-overlay">
+      <div className="modal-content">
+        <button className="close-button" onClick={handleClose}>
+          &times;
+        </button>
+        {children}
+      </div>
     </div>
   );
-}
-
-export default ModalApp;
+};
+export default Modal;

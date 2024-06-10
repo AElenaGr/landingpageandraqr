@@ -24,36 +24,7 @@ function Inicio(){
     <TandemButton enlace="/crear-qr" >Crear QR</TandemButton>
   </div>
   
-  <div className="qrarchivo">
-  <h2>ARCHIVO QR</h2>
-  <StaticImage
-    src="../images/qr-code.png"
-    loading="eager"
-    width={120}
-    quality={95}
-    formats={["auto", "webp", "avif"]}
-    alt=""
-    style={{ marginBottom: `var(--space-3)` }}
-    />
-  <StaticImage
-    src="../images/qr-code.png"
-    loading="eager"
-    width={120}
-    quality={95}
-    formats={["auto", "webp", "avif"]}
-    alt=""
-    style={{ marginBottom: `var(--space-3)` }}
-    />
-  <StaticImage
-    src="../images/qr-code.png"
-    loading="eager"
-    width={120}
-    quality={95}
-    formats={["auto", "webp", "avif"]}
-    alt=""
-    style={{ marginBottom: `var(--space-3)` }}
-    />
-  </div>
+  
 
   <a href="/" role='button' className='button'>Volver a inicio</a>
 </Layout>
