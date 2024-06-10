@@ -129,9 +129,9 @@ function Crearqr() {
   }
   return (
     <Layout>
-      <div style={containerStyle}>
+      <div className="generqr" style={containerStyle}>
         <div style={titleContainerStyle}>
-          <h1>GENERADOR DE QR</h1>
+          <h1 className="generadorqrtitulo">GENERADOR DE QR</h1>
           <FaQuestionCircle style={helpIconStyle} onClick={handleHelpClick} />
         </div>
         <br />
@@ -150,24 +150,25 @@ function Crearqr() {
           </div>
           <br />
           <br />
-          <p>Contenido del QR:</p>
+          <p>Descargar QR:</p>
           <p>{inputValue}</p>
         </div>
         <br />
         <div className="buttondownload-container">
-          <button onClick={handleDownload} className="buttondownload">
+          <button onClick={handleDownload} className="button">
             PNG
           </button>
-          <button onClick={handleDownload2} className="buttondownload">
+          <button onClick={handleDownload2} className="button">
             JPG
           </button>
-          <button onClick={handleDownload3} className="buttondownload">
+          <button onClick={handleDownload3} className="button">
             SVG
           </button>
         </div>
       </div>
 
       <Modal show={showModal} handleClose={handleCloseModal}>
+        <div className="instruccionesqr">
         <h2>Instrucciones</h2>
         <p>
           Introduce el texto, URL o geolocalización en el campo de entrada según
@@ -181,6 +182,7 @@ function Crearqr() {
           Haz clic en los botones de descarga para obtener el QR en el formato
           deseado (PNG, JPG, SVG).
         </p>
+        </div>
       </Modal>
       <a href="/" role='button' className='button'>Volver a inicio</a>
     </Layout>
