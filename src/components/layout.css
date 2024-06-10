@@ -442,6 +442,34 @@ footer a {
   padding: 0.5em;
 }
 
+/* QR  */
+.qrinicio {
+  background: radial-gradient(rgba(21, 243, 32, 0.5), #add8e6);
+  padding: 2em;
+  align-items: center;
+  text-align: center;
+  margin: 2em;
+}
+.qrarchivo {
+  background: radial-gradient(rgba(21, 243, 32, 0.5), #add8e6);
+  padding: 2em;
+  align-items: center;
+  text-align: center;
+  margin: 2em;
+}
+
+.carouselContainer {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.carouselImage {
+  width: 100%;
+  height: 600px; /* Adjust the height to make it larger */
+  object-fit: cover; /* Ensure the image covers the entire area without distortion */
+}
+
 /* accordion */
 
 /* INFORMACION INSTITUCIONAL */
@@ -485,36 +513,25 @@ div.infoinst .accordion-title:hover {
   background-color: #000000 !important;
 }
 
-/* descargar qr */
-
-/* QR  */
-.qrinicio {
-  background: radial-gradient(rgba(21, 243, 32, 0.5), #add8e6);
-  padding: 2em;
-  align-items: center;
-  text-align: center;
-  margin: 2em;
+.tab-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
 }
-.qrarchivo {
-  background: radial-gradient(rgba(21, 243, 32, 0.5), #add8e6);
-  padding: 2em;
-  align-items: center;
-  text-align: center;
-  margin: 2em;
+.tab {
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #A59A80;
+  border: 1px solid #ccc;
+  border-radius: 5px 5px 2px 2px;
 }
-
-.carouselContainer {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
+.tab.active {
+  background-color: #F5FAD7;
+  border-radius: 5px 5px 0 0 black;
+  border-color: black;
 }
 
-.carouselImage {
-  width: 100%;
-  height: 600px; /* Adjust the height to make it larger */
-  object-fit: cover; /* Ensure the image covers the entire area without distortion */
-}
-/*  */
+
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -554,7 +571,7 @@ div.infoinst .accordion-title:hover {
   padding: 10px 20px;
   cursor: pointer;
   border: 1px solid #ccc;
-  background-color: #f1f1f1;
+  background-color: #F1F1F1;
   margin-right: 5px;
   border-radius: 5px;
 }
@@ -562,16 +579,16 @@ div.infoinst .accordion-title:hover {
   background-color: #ddd;
   border-bottom: none;
 }
-.generadorqrtitulo{
-  background: radial-gradient(rgba(21, 243, 32, 0.5), #add8e6);
-}
-.generqr{
-  background: radial-gradient(rgba(21, 243, 32, 0.5), #add8e6);
+
+
+.tituloqr{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #5b1b1b;
+  padding: .2em;
+  margin: 0.2em;
+  border-style: double;
 }
 
-.instruccionesqr{
-  background: radial-gradient(rgba(21, 243, 32, 0.5), #add8e6);
-}
 /* MEDIA QUERY */
 /* Media Queries */
 @media screen and (mi-width: 400px) {
