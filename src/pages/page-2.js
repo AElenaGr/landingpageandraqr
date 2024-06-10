@@ -3,7 +3,7 @@ import Layout from "../components/layout"
 import { StaticImage } from "gatsby-plugin-image"
 import "../components/layout.css"
 import TandemButton from "../components/button";
-// import Crearqr from "./crear-qr";
+
 
 
 function Inicio(){
