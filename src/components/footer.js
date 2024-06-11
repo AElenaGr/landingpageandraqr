@@ -35,19 +35,19 @@ const Footer = () => {
           </div>
           <div className="footer-logos" style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center' }}>
             <StaticImage
-              src="../images/logosfooter/logo1.png"
+              src="../images/logo1.png"
               alt="Logo 1"
               className="footer-logo"
               style={{ width: '90px', height: '50px' }}
             />
             <StaticImage
-              src="../images/logosfooter/logo2.png"
+              src="../images/logo2.png"
               alt="Logo 2"
               className="footer-logo"
               style={{ width: '90px', height: '50px' }}
             />
             <StaticImage
-              src="../images/logosfooter/logo3.png"
+              src="../images/logo3.png"
               alt="Logo 3"
               className="footer-logo"
               style={{ width: '90px', height: '50px' }}
@@ -59,7 +59,7 @@ const Footer = () => {
               style={{ width: '90px', height: '50px' }}
             />
             <StaticImage
-              src="../images/logosfooter/logo5.png"
+              src="../images/logo5.png"
               alt="Logo 5"
               className="footer-logo"
               style={{ width: '90px', height: '50px' }}
