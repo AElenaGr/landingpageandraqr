@@ -255,60 +255,77 @@ pre tt:after {
   content: none;
 }
 
+
+
 /* FOOTER */
+
+/* layout.css */
+
 footer {
-  background-image: linear-gradient(to right, rgb(222, 208, 208), #4e6975);
-  color: #6c673a;
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  z-index:2;
+  background-color: #f4f4f4;
+  padding: 20px 0;
 }
 
-footer a {
-  color: #363022;
-  margin-right: 10px;
-  text-decoration: none;
-  position: relative;
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-.footer-left,
-.footer-right {
+.footer-content {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  margin-bottom: 10px;
 }
 
-.footer-links a::after {
-  content: " |";
-  color: #363022;
-  margin-left: 10px;
+.footer-links {
+  margin-bottom: 15px;
 }
 
-.footer-links a:last-child::after {
-  content: "";
+.footer-links a {
+  text-decoration: none;
+  color: #333;
+  margin: 0 10px;
 }
 
-.footer-icons {
+.footer-left {
+  margin-bottom: 15px;
+}
+
+.footer-left a {
+  text-decoration: none;
+  color: #333;
+}
+
+.footer-logos {
   display: flex;
-  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
-.footer-icons img {
-  width: 24px;
-  height: 24px;
-  transition: transform 0.3s ease;
+.footer-logo {
+  margin: 10px;
 }
 
-.footer-icons img:hover {
-  transform: scale(1.2);
+.footer-icon {
+  width: 30px;
+  height: 30px;
+  color: #333;
 }
 
 /* ENDFOOTER  */
 
+
+
+
+
+
+
+
+/* COMPARTIR REDES RRSS */
 .compartir-container {
-  margin: 50px;
+  margin: 10px;
 }
 
 .compartir-header p {
@@ -331,11 +348,15 @@ footer a {
 }
 
 
+
+
+
+
 /* BOTONES  */
 
 .botones {
   text-align: center;
-  padding: 5em;
+  padding: 2em;
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -453,15 +474,18 @@ footer a {
 
 /* Otras reglas de estilo adicionales según sea necesario */
 .infoinst {
-  background: radial-gradient(#506A76,
-  #D1C7C8);
-  padding: 1em;
+  background:
+  #D1C7C8;
+  
   text-align: justify;
   font-size: 0.8em;
 }
 
+
+
 /* ............................................................................... */
 /* botones */
+
 /* src/components/index.module.css */
 .layoute {
   display: flex;
@@ -530,7 +554,7 @@ footer a {
 
 /* INFORMACION INSTITUCIONAL */
 .infoinst {
-  background-color: antiquewhite;
+  background-color: white;
   padding: 2em;
   margin: 2em auto;
   text-align: center;
@@ -636,13 +660,15 @@ div.infoinst .accordion-title:hover {
   border-bottom: none;
 }
 
+/* QR CAJA CREAR QR GENERADOR  */
 
 .tituloqr{
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  
   color: #5b1b1b;
   padding: .2em;
   margin: 0.2em;
-  border-style: double;
+  border-bottom: 2px solid #5b1b1b;
 }
 
 /* MEDIA QUERY */

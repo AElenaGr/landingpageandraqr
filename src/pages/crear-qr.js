@@ -67,18 +67,24 @@ function Crearqr() {
   const handleCloseModal = () => {
     setShowModal(false);
   };
+
+
+
+  
   const containerStyle = {
-    backgroundColor: "#FAEBD7",
-    border: "1px solid black",
     padding: "5px",
-    borderRadius: "5px",
     textAlign: "center",
-    width: "90%",
-    height: "90%",
+    width: "80%", // Reducir el ancho al 80% del contenedor padre
+    height: "80%", // Reducir la altura al 80% del contenedor padre
     margin: "auto",
     marginTop: ".5em",
     justifyContent: "center",
-  };
+};
+
+  
+
+
+
   const inputStyle = {
     padding: "10px",
     borderRadius: "7px",

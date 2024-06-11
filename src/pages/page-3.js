@@ -146,34 +146,16 @@ const Info = () => {
   ];
   return (
     <Layout>
-      
       <div className="infoinst">
         <div className="imagecontainer">
-          <StaticImage
-            className="logopatrimonio"
-            src="../images/logo.png"
-            loading="eager"
-            width={100}
-            quality={100}
-            formats={['auto', 'webp', 'avif']}
-            alt=""
-          />
+          {/* Código de la imagen... */}
         </div>
-        <h1>SOBRE PATRIMONIO NACIONAL:
-          CONOCE NUESTRA HISTORIA</h1>
-        <p>
-          Patrimonio Nacional es un organismo público regulado por una Ley
-          específica de 1982, Ley 23/1982, de 16 de junio, heredera de una larga
-          serie de disposiciones entre las cuales cabe destacar las leyes de
-          1865, 1869, 1876, 1932 y 1940, aparte de las ordenanzas anteriores al
-          siglo XIX. En definitiva, esta entidad estatal constituye el núcleo
-          esencial y más importante del antiguo Real Patrimonio, o Patrimonio de
-          la Corona, denominado Patrimonio de la República por la Ley de 1932, y
-          con su nombre actual por las leyes de 1940 y 1982.
+        <h1>SOBRE PATRIMONIO NACIONAL: CONOCE NUESTRA HISTORIA</h1>
+        <p className="wide-text">
+          {/* Contenido del párrafo... */}
         </p>
         <Accordion items={accordionItems} />
       </div>
-     
       <a href="/" role='button' className='button'>Volver a inicio</a>
     </Layout>
   );
