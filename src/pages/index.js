@@ -9,6 +9,7 @@ import CollapseContacto from "../components/collapsecontacto"
 import CarousselApp from "../components/caroussel"
 import AlertButton2 from "../components/buttoninstitucional"
 
+
 const IndexPage = () => (
   <Layout>
     
@@ -31,6 +32,7 @@ const IndexPage = () => (
       </div>
     </div>
     <CollapseContacto />
+    
   </Layout>
 )
 

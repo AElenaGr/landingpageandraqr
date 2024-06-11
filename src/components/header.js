@@ -29,13 +29,16 @@ const Header = () => (
         style={{ marginRight: `var(--space-3)` }} // Espacio entre logo y título
       />
     </Link>
-    <nav style={{ display: 'flex', alignItems: 'center' }}>
-      <Link to="/crear-qr" style={{ margin: '0 1rem', textDecoration: 'none', color: 'black' }}>Crear QR</Link>
-      <span style={{ margin: '0 0.5rem' }}>|</span>
-      <Link to="/page-2" style={{ margin: '0 1rem', textDecoration: 'none', color: 'black' }}>Generador de QR</Link>
-      <span style={{ margin: '0 0.5rem' }}>|</span>
-      <Link to="/page-3" style={{ margin: '0 1rem', textDecoration: 'none', color: 'black' }}>Información Institucional</Link>
-    </nav>
+    <header>
+  <nav style={{ display: 'flex', alignItems: 'center' }}>
+    <Link to="/" style={{ margin: '0 1rem', textDecoration: 'none', color: 'black' }}>Inicio</Link>
+    <span style={{ margin: '0 0.5rem' }}>|</span>
+    <Link to="/page-2" style={{ margin: '0 1rem', textDecoration: 'none', color: 'black' }}>Generador de QR</Link>
+    <span style={{ margin: '0 0.5rem' }}>|</span>
+    <Link to="/page-3" style={{ margin: '0 1rem', textDecoration: 'none', color: 'black' }}>Información Institucional</Link>
+  </nav>
+</header>
+
   </header>
 )
 

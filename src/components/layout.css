@@ -263,6 +263,7 @@ footer {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  z-index:2;
 }
 
 footer a {
@@ -306,6 +307,28 @@ footer a {
 
 /* ENDFOOTER  */
 
+.compartir-container {
+  margin: 50px;
+}
+
+.compartir-header p {
+  font-size: 1.5rem;
+}
+
+.compartir-icons {
+  display: flex;
+  
+}
+
+.compartir-icon {
+  transition: all 0.3s ease;
+}
+
+.compartir-icon:hover {
+  background-color: rgba(79, 106, 118, 0.5);
+  border-radius: 50%;
+  transform: scale(1.2);
+}
 
 
 /* BOTONES  */

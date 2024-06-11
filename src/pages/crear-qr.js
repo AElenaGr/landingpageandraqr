@@ -6,7 +6,7 @@ import MyComponent from "../components/select";
 import QRCode from "qrcode.react";
 import { toPng, toJpeg, toSvg } from "html-to-image";
 import download from "downloadjs";
-
+import CompaQr from "../components/compa"
 import Header from "../components/header";
 import Footer from "../components/footer";
 import { FaQuestionCircle } from "react-icons/fa"; // Import the help icon
@@ -226,7 +226,8 @@ function Crearqr() {
         <p>Luego, selecciona el color y tamaño del QR utilizando las opciones disponibles.</p>
         <p>Haz clic en los botones de descarga para obtener el QR en el formato deseado (PNG, JPG, SVG).</p>
       </Modal>
-      <a href="/" role='button' className='button'>Volver a inicio</a>
+      <CompaQr></CompaQr>
+      
     </Layout>
   );
 }
