@@ -1,9 +1,11 @@
-import * as React from "react";
-import { Link } from "gatsby";
-import "./layout.css"; // Asegúrate de que tu CSS esté importado
-import { StaticImage } from 'gatsby-plugin-image';
+// src/components/header.js
 
-const Header = ({ siteTitle }) => (
+import * as React from "react"
+import { Link } from "gatsby"
+import { StaticImage } from 'gatsby-plugin-image'
+import "./layout.css" // Asegúrate de que tu CSS esté importado
+
+const Header = () => (
   <header
     style={{
       margin: `0 auto`,
@@ -26,9 +28,15 @@ const Header = ({ siteTitle }) => (
         alt="Logo PN"
         style={{ marginRight: `var(--space-3)` }} // Espacio entre logo y título
       />
-      <h1 style={{ margin: 0 }}>{}</h1> {/* Añadir el título del sitio si es necesario */}
     </Link>
+    <nav style={{ display: 'flex', alignItems: 'center' }}>
+      <Link to="/crear-qr" style={{ margin: '0 1rem', textDecoration: 'none', color: 'black' }}>Crear QR</Link>
+      <span style={{ margin: '0 0.5rem' }}>|</span>
+      <Link to="/page-2" style={{ margin: '0 1rem', textDecoration: 'none', color: 'black' }}>Generador de QR</Link>
+      <span style={{ margin: '0 0.5rem' }}>|</span>
+      <Link to="/page-3" style={{ margin: '0 1rem', textDecoration: 'none', color: 'black' }}>Información Institucional</Link>
+    </nav>
   </header>
-);
+)
 
-export default Header;
+export default Header

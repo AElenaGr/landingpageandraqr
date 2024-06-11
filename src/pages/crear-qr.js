@@ -69,19 +69,19 @@ function Crearqr() {
   };
   const containerStyle = {
     backgroundColor: "#FAEBD7",
-    border: "2px solid black",
-    padding: "20px",
-    borderRadius: "10px",
+    border: "1px solid black",
+    padding: "5px",
+    borderRadius: "5px",
     textAlign: "center",
-    width: "50%",
-    height: "50%",
+    width: "90%",
+    height: "90%",
     margin: "auto",
-    marginTop: "1em",
+    marginTop: ".5em",
     justifyContent: "center",
   };
   const inputStyle = {
     padding: "10px",
-    borderRadius: "5px",
+    borderRadius: "7px",
     border: "2px solid #ccc",
     fontSize: "16px",
     width: "50%",
@@ -92,7 +92,7 @@ function Crearqr() {
     resize: "none", // Prevent resizing of the textarea
   };
   const helpIconStyle = {
-    marginLeft: "10px",
+    marginLeft: "20px",
     cursor: "pointer",
   };
   const titleContainerStyle = {

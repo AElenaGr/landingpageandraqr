@@ -255,94 +255,125 @@ pre tt:after {
   content: none;
 }
 
-/* FOOTER  */
+/* FOOTER */
 footer {
-  background-image: linear-gradient(to right, rgb(222, 208, 208), #6c673a);
+  background-image: linear-gradient(to right, rgb(222, 208, 208), #4e6975);
   color: #6c673a;
-  padding: 20px; /* Agrega padding para un poco de espacio interior */
-  display: flex; /* Usar flexbox para organizar el contenido */
-  justify-content: space-between; /* Espaciar elementos */
-  flex-wrap: wrap; /* Permitir que los elementos se envuelvan */
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 footer a {
   color: #363022;
-  margin-right: 10px; /* Espacio entre enlaces */
+  margin-right: 10px;
+  text-decoration: none;
+  position: relative;
 }
 
-.footer-left {
-  display: flex;
-  align-items: center;
-}
-
+.footer-left,
 .footer-right {
   display: flex;
   align-items: center;
+  margin-bottom: 10px;
+}
+
+.footer-links a::after {
+  content: " |";
+  color: #363022;
+  margin-left: 10px;
+}
+
+.footer-links a:last-child::after {
+  content: "";
 }
 
 .footer-icons {
   display: flex;
-  gap: 15px; /* Espacio entre iconos */
+  gap: 15px;
 }
 
 .footer-icons img {
-  width: 24px; /* Tamaño de los iconos */
+  width: 24px;
   height: 24px;
+  transition: transform 0.3s ease;
 }
+
+.footer-icons img:hover {
+  transform: scale(1.2);
+}
+
 /* ENDFOOTER  */
 
+
+
+/* BOTONES  */
+
 .botones {
-  background-image: url("../images/Fuente.jpg");
   text-align: center;
   padding: 5em;
   background-repeat: no-repeat;
   background-size: cover;
-  display: flex; /* Usar flexbox para alinear los botones en línea */
-  flex-direction: column; /* Alinear los botones en columna */
-  align-items: center; /* Centrar los elementos verticalmente */
-  justify-content: center; /* Centrar los elementos horizontalmente */
-  gap: 10px; /* Espacio entre los botones */
+
 }
 
+
 .button {
-  margin: 0; /* Remover margen */
-  padding: 0.9em; /* Reducir el padding */
+  display: inline-block; /* Asegura que se comporta como un bloque en línea */
+  margin: 10px; /* Espaciado alrededor de los botones */
+  padding: 10px 20px; /* Espaciado interno del botón */
   border-radius: 10px; /* Redondear los bordes */
-  background: radial-gradient(
-    rgba(21, 243, 32, 0.5),
-    #add8e6
-  ) !important; /* Gradiente radial en hover */
+  background: radial-gradient( #6f8d9b,
+  #D1C7C8) !important; /* Gradiente radial */
   color: rgb(10, 10, 10); /* Color del texto */
-  border: 3px solid #000000; /* Bordes negros */
+  border: 1px solid #000000; /* Bordes negros */
   cursor: pointer;
-  transition: background-color 0.3s ease; /* Transición para el hover */
-  box-shadow: 2px 2px 5px #000000; /* Sombra para efecto de relieve */
-  width: 250px; /* Ancho fijo para todos los botones */
-  height: 50px; /* Alto fijo para todos los botones */
-  text-align: center; /* Alinear el texto horizontalmente */
-  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Transición para el hover */
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Sombra para efecto de relieve */
+  text-align: center; /* Centra el texto dentro del botón */
 }
 
 .button:hover {
   font-style: italic;
   background-color: #a59a80; /* Color de fondo para un estilo más serio */
+  transform: scale(1.05); /* Efecto de escala para un ligero aumento */
 }
 
-/* MAS INFO  */
+/* Centrar los botones en su contenedor */
+.button-container {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  flex-wrap: wrap; /* Permite que los botones se muevan a la siguiente línea si es necesario */
+  height: 100vh; /* Altura del contenedor para centrar verticalmente */
+}
 
+
+/* boton de MAS INFO  */
+
+/* Estilos del contenedor para centrar el botón */
+.button-container {
+  display: flex;
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  height: 100vh; /* Altura de la ventana del navegador */
+}
+
+/* Estilos del botón */
 .more-info-button {
-  font-size: 1.2em;
+  font-size: 1em;
   margin-bottom: 1rem;
   padding: 0.5em 1em;
   background: radial-gradient(
-    rgba(21, 243, 32, 0.5),
-    #add8e6
+    #7192a1,
+    #D1C7C8
   ); /* Gradiente radial como fondo inicial */
-  border: black; /* Elimina el borde del botón */
+  
   color: rgb(0, 0, 0); /* Color del texto del botón */
   cursor: pointer; /* Cambia el cursor al pasar por el botón */
   transition: all 0.3s ease; /* Transición suave para el hover */
-  border: 3px solid #000000;
+  border: 1px solid #000000;
 }
 
 .more-info-button:hover {
@@ -350,7 +381,8 @@ footer a {
 }
 
 .card-body-custom {
-  background: radial-gradient(rgba(243, 236, 21, 0.5), #add8e6);
+  background: radial-gradient(#506A76,
+  #D1C7C8);
   color: black !important; /* Color del texto negro */
   padding: 1em; /* Espaciado interno */
   border-radius: 10px; /* Bordes redondeados */
@@ -359,8 +391,8 @@ footer a {
 
 .text-container {
   background: radial-gradient(
-    rgba(164, 240, 168, 0.5),
-    #add8e6
+    #506A76,
+    #D1C7C8
   ); /* Gradiente radial como fondo del contenedor */
   padding: 1em;
   border-radius: 10px; /* Bordes redondeados */
@@ -376,8 +408,8 @@ footer a {
   max-width: 1200px; /* Ancho máximo del carrusel */
   margin: auto; /* Centrar el carrusel */
   background: radial-gradient(
-    rgba(21, 243, 32, 0.5),
-    #add8e6
+    #506A76,
+    #D1C7C8
   ); /* Degradado radial */
   padding: 1em;
   margin-bottom: 2em;
@@ -398,8 +430,9 @@ footer a {
 
 /* Otras reglas de estilo adicionales según sea necesario */
 .infoinst {
-  background: radial-gradient(rgba(21, 243, 32, 0.5), #add8e6);
-  padding: 2em;
+  background: radial-gradient(#506A76,
+  #D1C7C8);
+  padding: 1em;
   text-align: justify;
   font-size: 0.8em;
 }
@@ -444,14 +477,14 @@ footer a {
 
 /* QR  */
 .qrinicio {
-  background: radial-gradient(rgba(21, 243, 32, 0.5), #add8e6);
+  
   padding: 2em;
   align-items: center;
   text-align: center;
   margin: 2em;
 }
 .qrarchivo {
-  background: radial-gradient(rgba(21, 243, 32, 0.5), #add8e6);
+  /* background: radial-gradient(rgba(21, 243, 32, 0.5), #add8e6); */
   padding: 2em;
   align-items: center;
   text-align: center;

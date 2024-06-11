@@ -7,6 +7,7 @@ import TandemButton from "../components/button"
 import Header from "../components/header"
 import CollapseContacto from "../components/collapsecontacto"
 import CarousselApp from "../components/caroussel"
+import AlertButton2 from "../components/buttoninstitucional"
 
 const IndexPage = () => (
   <Layout>
@@ -25,7 +26,7 @@ const IndexPage = () => (
       <div className={styles.botones}>
         <div className={styles.buttonContainer}>
           <TandemButton enlace="page-2">Acceso QR</TandemButton>
-          <TandemButton enlace="page-3">Información institucional</TandemButton>
+          <AlertButton2 enlace="page-3">Información institucional</AlertButton2>
         </div>
       </div>
     </div>
