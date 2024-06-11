@@ -1,33 +1,34 @@
 import React from "react";
+import { Link } from "gatsby"; // Importa el componente Link de Gatsby
 import { StaticImage } from "gatsby-plugin-image";
 import { FaInstagram, FaTwitter, FaFacebook, FaLinkedin } from 'react-icons/fa';
 import "./layout.css";
+
 const Footer = () => {
   return (
     <footer>
       <div className="footer-container">
         <div className="footer-content">
           <div className="footer-links">
-            {/* Actualizado el enlace del Aviso Legal */}
-            <a className="a" href="/avisolegal">
+            <Link className="a" to="/aviso-legal">
               Aviso Legal
-            </a>
+            </Link>
             {" "} |{" "}
-            <a className="a" href="https://www.patrimonionacional.es/accesibilidad">
+            <Link className="a" to="/accesibilidad">
               Accesibilidad
-            </a>
+            </Link>
             {" "} |{" "}
-            <a className="a" href="https://www.patrimonionacional.es/politica-de-privacidad">
+            <Link className="a" to="/politica-de-privacidad">
               Política de Privacidad
-            </a>
+            </Link>
             {" "} |{" "}
-            <a className="a" href="https://www.patrimonionacional.es/politica-de-cookies">
-              Política de cookies
-            </a>
+            <Link className="a" to="/politica-de-cookies">
+              Política de Cookies
+            </Link>
             {" "} |{" "}
-            <a className="a" href="https://www.patrimonionacional.es/contacto">
+            <Link className="a" to="/contacto">
               Contacto
-            </a>
+            </Link>
           </div>
           <div className="footer-left">
             <span>© {new Date().getFullYear()} &middot; </span>
@@ -59,7 +60,7 @@ const Footer = () => {
               style={{ width: '90px', height: '50px' }}
             />
             <StaticImage
-              src="../images/logo5.png"
+              src="../images/logosfooter/logo5.png"
               alt="Logo 5"
               className="footer-logo"
               style={{ width: '90px', height: '50px' }}
@@ -82,4 +83,5 @@ const Footer = () => {
     </footer>
   );
 };
+
 export default Footer;

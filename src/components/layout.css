@@ -261,6 +261,8 @@ pre tt:after {
 
 /* layout.css */
 
+/* layout.css */
+
 footer {
   background-color: #f4f4f4;
   padding: 20px 0;
@@ -300,7 +302,7 @@ footer {
 .footer-logos {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between; /* Cambiado de 'center' a 'space-between' */
   align-items: center;
 }
 
@@ -312,6 +314,7 @@ footer {
   width: 30px;
   height: 30px;
   color: #333;
+  margin-left: 10px; /* Añadido margen izquierdo para separar los íconos */
 }
 
 /* ENDFOOTER  */
@@ -342,7 +345,7 @@ footer {
 }
 
 .compartir-icon:hover {
-  background-color: rgba(79, 106, 118, 0.5);
+  background-color: rgba(126, 152, 163, 0.5);
   border-radius: 50%;
   transform: scale(1.2);
 }
@@ -368,8 +371,7 @@ footer {
   margin: 10px; /* Espaciado alrededor de los botones */
   padding: 10px 20px; /* Espaciado interno del botón */
   border-radius: 10px; /* Redondear los bordes */
-  background: radial-gradient( #6f8d9b,
-  #D1C7C8) !important; /* Gradiente radial */
+  background: linear-gradient(to right, #71a7c0, #aaccdb, #faf9f9)!important; /* Gradiente radial */
   color: rgb(10, 10, 10); /* Color del texto */
   border: 1px solid #000000; /* Bordes negros */
   cursor: pointer;
@@ -409,10 +411,7 @@ footer {
   font-size: 1em;
   margin-bottom: 1rem;
   padding: 0.5em 1em;
-  background: radial-gradient(
-    #7192a1,
-    #D1C7C8
-  ); /* Gradiente radial como fondo inicial */
+  background: linear-gradient(to right,#71a7c0, #aaccdb, #faf9f9);  /* Gradiente radial como fondo inicial */
   
   color: rgb(0, 0, 0); /* Color del texto del botón */
   cursor: pointer; /* Cambia el cursor al pasar por el botón */
@@ -480,6 +479,29 @@ footer {
   text-align: justify;
   font-size: 0.8em;
 }
+
+
+
+/* contacto  */
+
+.contact-details {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.contact-details h2 {
+  font-size: 24px;
+  color: #333;
+}
+
+.contact-details p {
+  font-size: 18px;
+  color: #666;
+}
+/* fin contacto  */
+
+
 
 
 
