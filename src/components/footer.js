@@ -18,11 +18,11 @@ const Footer = () => {
               Accesibilidad
             </Link>
             {" "} |{" "}
-            <Link className="a" to="/politica-de-privacidad">
+            <Link className="a" to="/politicadeprivacidad">
               Política de Privacidad
             </Link>
             {" "} |{" "}
-            <Link className="a" to="/politica-de-cookies">
+            <Link className="a" to="/politicadecookies">
               Política de Cookies
             </Link>
             {" "} |{" "}
