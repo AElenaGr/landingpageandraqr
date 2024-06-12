@@ -10,6 +10,7 @@ import { FaQuestionCircle } from "react-icons/fa"; // Import the help icon
 import Modal from "../components/modal"; // Import the modal component
 import Tabs from "../components/tabs";
 import MapaConMarcador from "../components/mapa";
+import 'leaflet/dist/leaflet.css'; // Import Leaflet CSS
 
 function Crearqr() {
   const [latLng, setLatLng] = useState(null);
@@ -245,7 +246,6 @@ function Crearqr() {
           </button>
         </div>
       </div>
-
       <Modal show={showModal} handleClose={handleCloseModal}>
         <h2>Instrucciones</h2>
         <p>Selecciona la pestaña correspondiente y sigue las instrucciones:</p>
