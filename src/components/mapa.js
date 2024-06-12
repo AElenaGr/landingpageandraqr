@@ -1,10 +1,9 @@
-// src/components/MapaConMarcador.js
-import React, { useState } from 'react';
-import { MapContainer, TileLayer, Marker, Popup, useMapEvents } from 'react-leaflet';
+import React from 'react';
+import { MapContainer, TileLayer, useMapEvents } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 
-// Arreglar el problema de los iconos que no se muestran
+// Fix icon issue for leaflet
 import iconUrl from 'leaflet/dist/images/marker-icon.png';
 import iconRetinaUrl from 'leaflet/dist/images/marker-icon-2x.png';
 import shadowUrl from 'leaflet/dist/images/marker-shadow.png';
@@ -39,6 +38,4 @@ const MapaConMarcador = ({ setLatLng }) => {
     );
 };
 
-
 export default MapaConMarcador;
-

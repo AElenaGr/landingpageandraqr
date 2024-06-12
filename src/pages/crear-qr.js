@@ -1,20 +1,18 @@
-import * as React from "react";
-import { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Layout from "../components/layout";
 import "../components/layout.css";
 import MyComponent from "../components/select";
 import QRCode from "qrcode.react";
 import { toPng, toJpeg, toSvg } from "html-to-image";
 import download from "downloadjs";
-import CompaQr from "../components/compa"
-import Header from "../components/header";
-import Footer from "../components/footer";
+import CompaQr from "../components/compa";
 import { FaQuestionCircle } from "react-icons/fa"; // Import the help icon
 import Modal from "../components/modal"; // Import the modal component
 import Tabs from "../components/tabs";
 import MapaConMarcador from "../components/mapa";
 
 function Crearqr() {
+  const [latLng, setLatLng] = useState(null);
   const [inputValue, setInputValue] = useState("");
   const [latitude, setLatitude] = useState("");
   const [longitude, setLongitude] = useState("");
@@ -23,55 +21,69 @@ function Crearqr() {
   const [activeTab, setActiveTab] = useState('url'); // State to manage active tab
   const [showModal, setShowModal] = useState(false); // State to manage modal visibility
   const qrRef = useRef(null);
+
+  useEffect(() => {
+    if (latLng) {
+      setLatitude(latLng.lat.toFixed(6));
+      setLongitude(latLng.lng.toFixed(6));
+    }
+  }, [latLng]);
+
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
   };
+
   const handleLatitudeChange = (event) => {
     const value = event.target.value;
     if (/^-?\d*\.?\d*$/.test(value)) {
       setLatitude(value);
     }
   };
+
   const handleLongitudeChange = (event) => {
     const value = event.target.value;
     if (/^-?\d*\.?\d*$/.test(value)) {
       setLongitude(value);
     }
   };
+
   const handleColorChange = (color) => {
     setQrColor(color);
   };
+
   const handleSizeChange = (size) => {
     setQrSize(parseInt(size, 10));
   };
+
   const handleDownload = async () => {
     if (qrRef.current) {
       const dataUrl = await toPng(qrRef.current);
       download(dataUrl, "qr-code.png");
     }
   };
+
   const handleDownload2 = async () => {
     if (qrRef.current) {
       const dataUrl = await toJpeg(qrRef.current);
       download(dataUrl, "qr-code.jpeg");
     }
   };
+
   const handleDownload3 = async () => {
     if (qrRef.current) {
       const dataUrl = await toSvg(qrRef.current);
       download(dataUrl, "qr-code.svg");
     }
   };
+
   const handleHelpClick = () => {
     setShowModal(true);
   };
+
   const handleCloseModal = () => {
     setShowModal(false);
   };
 
-
-
-  
   const containerStyle = {
     padding: "5px",
     textAlign: "center",
@@ -80,11 +92,7 @@ function Crearqr() {
     margin: "auto",
     marginTop: ".5em",
     justifyContent: "center",
-};
-
-  
-
-
+  };
 
   const inputStyle = {
     padding: "10px",
@@ -94,19 +102,23 @@ function Crearqr() {
     width: "50%",
     marginBottom: "10px",
   };
+
   const textAreaStyle = {
     ...inputStyle,
     resize: "none", // Prevent resizing of the textarea
   };
+
   const helpIconStyle = {
     marginLeft: "20px",
     cursor: "pointer",
   };
+
   const titleContainerStyle = {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
   };
+
   const colorOptions = [
     "black",
     "blue",
@@ -118,6 +130,7 @@ function Crearqr() {
     "pink",
     "magenta",
   ];
+
   const renderInputField = () => {
     switch (activeTab) {
       case 'url':
@@ -134,31 +147,35 @@ function Crearqr() {
           </div>
         );
       case 'geolocation':
-        
         return (
           <div>
-            
             <p>Introduce la geolocalización (latitud y longitud):</p>
             <input
               type="text"
-              placeholder="Latitud: 34,056687222"
+              placeholder="Latitud: 34.056687"
               value={latitude}
               onChange={handleLatitudeChange}
               style={inputStyle}
             />
-            
             <input
               type="text"
-              placeholder="Longitud: -117,195731667"
+              placeholder="Longitud: -117.195732"
               value={longitude}
               onChange={handleLongitudeChange}
               style={inputStyle}
             />
-            <MapaConMarcador></MapaConMarcador>
+            <MapaConMarcador setLatLng={setLatLng} />
+            <div className="coordinates">
+              {latLng ? (
+                <p>
+                  Latitud: {latitude}, Longitud: {longitude}
+                </p>
+              ) : (
+                <p>Haz clic en el mapa para obtener las coordenadas</p>
+              )}
+            </div>
           </div>
-          
         );
-        
       case 'text':
         return (
           <div>
@@ -175,6 +192,7 @@ function Crearqr() {
         return null;
     }
   };
+
   const getQrValue = () => {
     switch (activeTab) {
       case 'url':
@@ -187,9 +205,9 @@ function Crearqr() {
         return '';
     }
   };
+
   return (
     <Layout>
-      
       <div style={containerStyle}>
         <div style={titleContainerStyle}>
           <h1 className="tituloqr">GENERADOR DE QR</h1>
@@ -227,7 +245,7 @@ function Crearqr() {
           </button>
         </div>
       </div>
-      
+
       <Modal show={showModal} handleClose={handleCloseModal}>
         <h2>Instrucciones</h2>
         <p>Selecciona la pestaña correspondiente y sigue las instrucciones:</p>
@@ -240,8 +258,8 @@ function Crearqr() {
         <p>Haz clic en los botones de descarga para obtener el QR en el formato deseado (PNG, JPG, SVG).</p>
       </Modal>
       <CompaQr></CompaQr>
-      
     </Layout>
   );
 }
+
 export default Crearqr;
