@@ -12,6 +12,7 @@ import Footer from "../components/footer";
 import { FaQuestionCircle } from "react-icons/fa"; // Import the help icon
 import Modal from "../components/modal"; // Import the modal component
 import Tabs from "../components/tabs";
+import MapaConMarcador from "../components/mapa";
 
 function Crearqr() {
   const [inputValue, setInputValue] = useState("");
@@ -133,8 +134,10 @@ function Crearqr() {
           </div>
         );
       case 'geolocation':
+        
         return (
           <div>
+            
             <p>Introduce la geolocalización (latitud y longitud):</p>
             <input
               type="text"
@@ -143,6 +146,7 @@ function Crearqr() {
               onChange={handleLatitudeChange}
               style={inputStyle}
             />
+            
             <input
               type="text"
               placeholder="Longitud: -117,195731667"
@@ -150,8 +154,11 @@ function Crearqr() {
               onChange={handleLongitudeChange}
               style={inputStyle}
             />
+            <MapaConMarcador></MapaConMarcador>
           </div>
+          
         );
+        
       case 'text':
         return (
           <div>
