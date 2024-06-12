@@ -1,5 +1,3 @@
-// src/components/layout.js
-
 import * as React from "react"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from "./header"
