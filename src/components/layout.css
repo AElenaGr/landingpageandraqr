@@ -458,7 +458,7 @@ footer {
   margin: 10px; /* Espaciado alrededor de los botones */
   padding: 10px 20px; /* Espaciado interno del botón */
   border-radius: 10px; /* Redondear los bordes */
-  background: linear-gradient(to right, #71a7c0, #aaccdb, #faf9f9)!important; /* Gradiente radial */
+  background: linear-gradient(to right, #cddee6, #dfeef5, #faf9f9)!important; /* Gradiente radial */
   color: rgb(10, 10, 10); /* Color del texto */
   border: 1px solid #000000; /* Bordes negros */
   cursor: pointer;
@@ -498,7 +498,7 @@ footer {
   font-size: 1em;
   margin-bottom: 1rem;
   padding: 0.5em 1em;
-  background: linear-gradient(to right,#71a7c0, #aaccdb, #faf9f9);  /* Gradiente radial como fondo inicial */
+  background: linear-gradient(to right,#cddee6, #dfeef5, #faf9f9);  /* Gradiente radial como fondo inicial */
   
   color: rgb(0, 0, 0); /* Color del texto del botón */
   cursor: pointer; /* Cambia el cursor al pasar por el botón */
@@ -511,8 +511,7 @@ footer {
 }
 
 .card-body-custom {
-  background: radial-gradient(#506A76,
-  #D1C7C8);
+  background: radial-gradient(#cddee6, #dfeef5, #faf9f9);
   color: black !important; /* Color del texto negro */
   padding: 1em; /* Espaciado interno */
   border-radius: 10px; /* Bordes redondeados */
@@ -521,8 +520,7 @@ footer {
 
 .text-container {
   background: radial-gradient(
-    #506A76,
-    #D1C7C8
+    #cddee6, #dfeef5, #faf9f9
   ); /* Gradiente radial como fondo del contenedor */
   padding: 1em;
   border-radius: 10px; /* Bordes redondeados */
@@ -538,8 +536,7 @@ footer {
   max-width: 1200px; /* Ancho máximo del carrusel */
   margin: auto; /* Centrar el carrusel */
   background: radial-gradient(
-    #506A76,
-    #D1C7C8
+    #cddee6, #dfeef5, #faf9f9
   ); /* Degradado radial */
   padding: 1em;
   margin-bottom: 2em;
