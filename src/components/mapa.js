@@ -21,7 +21,11 @@ L.Icon.Default.mergeOptions({
 const LocationMarker = ({ setLatLng }) => {
     useMapEvents({
         click(e) {
-            setLatLng(e.latlng);
+            if (e && e.latlng) {
+                setLatLng(e.latlng);
+            } else {
+                console.error("El evento o la latitud/longitud no están definidos.");
+            }
         },
     });
 
