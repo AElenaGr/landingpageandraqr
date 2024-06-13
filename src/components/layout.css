@@ -26,28 +26,38 @@
   --size-gutter: var(--space-5);
   --size-gap: var(--space-6);
 }
-html {
-  -webkit-text-size-adjust: 100%;
-  box-sizing: border-box;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+/* Reset y ajustes generales */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   font-size: var(--font-md);
   line-height: var(--line-height-normal);
   overflow-y: scroll;
 }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  box-sizing: border-box;
+}
+
 body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-family: var(--font-title);
   font-weight: normal;
-  margin: auto;
   word-wrap: break-word;
   position: relative; /* Importante para el uso de pseudo-elementos */
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
 }
 
+/* Pseudo-elemento para la imagen de fondo */
 body::before {
   content: ""; /* Obligatorio para el uso de pseudo-elementos */
-  position: absolute;
+  position: fixed; /* Cambiado a fixed para asegurar que cubra toda la pantalla */
   top: 0;
   left: 0;
   width: 100%;
@@ -55,9 +65,88 @@ body::before {
   background-image: url("../images/ffuente.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
   opacity: 0.5; /* Ajusta la opacidad según sea necesario */
   z-index: -1; /* Asegura que el pseudo-elemento esté detrás del contenido */
 }
+
+/* Contenedor principal */
+#___gatsby, #gatsby-focus-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+main {
+  flex: 1; /* Hacer que el contenido principal se expanda para ocupar el espacio disponible */
+}
+
+/* FOOTER */
+footer {
+  background-color: #f4f4f4;
+  padding: 20px 0;
+  width: 100%;
+  margin-top: auto; /* Asegura que el footer se empuje al final del contenedor */
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-links {
+  margin-bottom: 15px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #333;
+  margin: 0 10px;
+}
+
+.footer-left {
+  margin-bottom: 15px;
+}
+
+.footer-left a {
+  text-decoration: none;
+  color: #333;
+}
+
+.footer-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Cambiado de 'center' a 'space-between' */
+  align-items: center;
+}
+
+.footer-logo {
+  margin: 10px;
+}
+
+.footer-icon {
+  width: 30px;
+  height: 30px;
+  color: #333;
+  margin-left: 10px; /* Añadido margen izquierdo para separar los íconos */
+}
+
+/* Ajustes específicos para asegurar compatibilidad */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+
 
 a {
   background-color: transparent;
@@ -257,15 +346,15 @@ pre tt:after {
 
 
 
+
+
+
 /* FOOTER */
-
-/* layout.css */
-
-/* layout.css */
-
 footer {
   background-color: #f4f4f4;
   padding: 20px 0;
+  margin-top: auto;  /* Asegura que el footer se empuje al final del contenedor */
+  width: 100%;
 }
 
 .footer-container {
@@ -316,9 +405,7 @@ footer {
   color: #333;
   margin-left: 10px; /* Añadido margen izquierdo para separar los íconos */
 }
-
-/* ENDFOOTER  */
-
+/* ENDFOOTER */
 
 
 
