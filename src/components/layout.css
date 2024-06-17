@@ -26,38 +26,28 @@
   --size-gutter: var(--space-5);
   --size-gap: var(--space-6);
 }
-/* Reset y ajustes generales */
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+html {
+  -webkit-text-size-adjust: 100%;
+  box-sizing: border-box;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   font-size: var(--font-md);
   line-height: var(--line-height-normal);
   overflow-y: scroll;
 }
-
-html {
-  -webkit-text-size-adjust: 100%;
-  box-sizing: border-box;
-}
-
 body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-family: var(--font-title);
   font-weight: normal;
+  margin: auto;
   word-wrap: break-word;
   position: relative; /* Importante para el uso de pseudo-elementos */
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
 }
 
-/* Pseudo-elemento para la imagen de fondo */
 body::before {
   content: ""; /* Obligatorio para el uso de pseudo-elementos */
-  position: fixed; /* Cambiado a fixed para asegurar que cubra toda la pantalla */
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -65,88 +55,9 @@ body::before {
   background-image: url("../images/ffuente.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
   opacity: 0.5; /* Ajusta la opacidad según sea necesario */
   z-index: -1; /* Asegura que el pseudo-elemento esté detrás del contenido */
 }
-
-/* Contenedor principal */
-#___gatsby, #gatsby-focus-wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
-}
-
-main {
-  flex: 1; /* Hacer que el contenido principal se expanda para ocupar el espacio disponible */
-}
-
-/* FOOTER */
-footer {
-  background-color: #f4f4f4;
-  padding: 20px 0;
-  width: 100%;
-  margin-top: auto; /* Asegura que el footer se empuje al final del contenedor */
-}
-
-.footer-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.footer-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.footer-links {
-  margin-bottom: 15px;
-}
-
-.footer-links a {
-  text-decoration: none;
-  color: #333;
-  margin: 0 10px;
-}
-
-.footer-left {
-  margin-bottom: 15px;
-}
-
-.footer-left a {
-  text-decoration: none;
-  color: #333;
-}
-
-.footer-logos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between; /* Cambiado de 'center' a 'space-between' */
-  align-items: center;
-}
-
-.footer-logo {
-  margin: 10px;
-}
-
-.footer-icon {
-  width: 30px;
-  height: 30px;
-  color: #333;
-  margin-left: 10px; /* Añadido margen izquierdo para separar los íconos */
-}
-
-/* Ajustes específicos para asegurar compatibilidad */
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
-
 
 a {
   background-color: transparent;
@@ -346,15 +257,13 @@ pre tt:after {
 
 
 
-
-
-
 /* FOOTER */
+
+
+
 footer {
   background-color: #f4f4f4;
   padding: 20px 0;
-  margin-top: auto;  /* Asegura que el footer se empuje al final del contenedor */
-  width: 100%;
 }
 
 .footer-container {
@@ -405,7 +314,9 @@ footer {
   color: #333;
   margin-left: 10px; /* Añadido margen izquierdo para separar los íconos */
 }
-/* ENDFOOTER */
+
+/* ENDFOOTER  */
+
 
 
 
@@ -458,7 +369,7 @@ footer {
   margin: 10px; /* Espaciado alrededor de los botones */
   padding: 10px 20px; /* Espaciado interno del botón */
   border-radius: 10px; /* Redondear los bordes */
-  background: linear-gradient(to right, #cddee6, #dfeef5, #faf9f9)!important; /* Gradiente radial */
+  background: linear-gradient(to right, #71a7c0, #aaccdb, #faf9f9)!important; /* Gradiente radial */
   color: rgb(10, 10, 10); /* Color del texto */
   border: 1px solid #000000; /* Bordes negros */
   cursor: pointer;
@@ -498,7 +409,7 @@ footer {
   font-size: 1em;
   margin-bottom: 1rem;
   padding: 0.5em 1em;
-  background: linear-gradient(to right,#cddee6, #dfeef5, #faf9f9);  /* Gradiente radial como fondo inicial */
+  background: linear-gradient(to right,#71a7c0, #aaccdb, #faf9f9);  /* Gradiente radial como fondo inicial */
   
   color: rgb(0, 0, 0); /* Color del texto del botón */
   cursor: pointer; /* Cambia el cursor al pasar por el botón */
@@ -511,7 +422,8 @@ footer {
 }
 
 .card-body-custom {
-  background: radial-gradient(#cddee6, #dfeef5, #faf9f9);
+  background: radial-gradient(#506A76,
+  #D1C7C8);
   color: black !important; /* Color del texto negro */
   padding: 1em; /* Espaciado interno */
   border-radius: 10px; /* Bordes redondeados */
@@ -520,7 +432,8 @@ footer {
 
 .text-container {
   background: radial-gradient(
-    #cddee6, #dfeef5, #faf9f9
+    #506A76,
+    #D1C7C8
   ); /* Gradiente radial como fondo del contenedor */
   padding: 1em;
   border-radius: 10px; /* Bordes redondeados */
@@ -536,7 +449,8 @@ footer {
   max-width: 1200px; /* Ancho máximo del carrusel */
   margin: auto; /* Centrar el carrusel */
   background: radial-gradient(
-    #cddee6, #dfeef5, #faf9f9
+    #506A76,
+    #D1C7C8
   ); /* Degradado radial */
   padding: 1em;
   margin-bottom: 2em;

@@ -86,7 +86,7 @@ function Crearqr() {
   };
 
   const containerStyle = {
-    padding: "5px",
+    padding: "1px",
     textAlign: "center",
     width: "80%", // Reducir el ancho al 80% del contenedor padre
     height: "80%", // Reducir la altura al 80% del contenedor padre
@@ -96,7 +96,7 @@ function Crearqr() {
   };
 
   const inputStyle = {
-    padding: "10px",
+    padding: "5px",
     borderRadius: "7px",
     border: "2px solid #ccc",
     fontSize: "16px",

@@ -27,6 +27,7 @@ const IndexPage = () => (
 
       <div className={styles.botones}>
         <div className={styles.buttonContainer}>
+          <TandemButton enlace="formulario">Acceso Empleados</TandemButton>
           <TandemButton enlace="page-2">Acceso QR</TandemButton>
           <AlertButton2 enlace="page-3">Información institucional</AlertButton2>
         </div>

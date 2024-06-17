@@ -38,7 +38,7 @@ const LocationMarker = ({ setLatLng }) => {
 
 const MapaConMarcador = ({ setLatLng }) => {
     return (
-        <MapContainer center={[40.030501, -3.604052]} zoom={13} style={{ height: '50vh', width: '100%' }}>
+        <MapContainer center={[40.030501, -3.604052]} zoom={13} style={{ height: '70vh', width: '100%' }}>
             <TileLayer
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
