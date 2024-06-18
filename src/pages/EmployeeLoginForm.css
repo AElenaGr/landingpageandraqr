@@ -33,9 +33,9 @@
   border-radius: 4px;
   background-color: #fff;
 }
-.login-form input::placeholder {
-  color: #fff;
-}
+/* .login-form input::placeholder {
+  color: #5b2626;
+} */
 .login-form button {
   margin-top: 2rem;
   width: 100%;

@@ -496,6 +496,45 @@ footer {
 
 
 
+/* REGISTRARSE */
+
+.login-form-container {
+  max-width: 800px; /* Ancho máximo del contenedor */
+  margin: auto; /* Centrar el contenedor en la página */
+  padding: 20px; /* Espacio interno */
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form label,
+.login-form input {
+  margin-bottom: 10px;
+}
+
+.login-form input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.login-form button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.login-form button:hover {
+  background-color: #0056b3;
+}
+/* FIN */
 
 
 /* ............................................................................... */
