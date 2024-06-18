@@ -384,25 +384,20 @@ footer {
   transform: scale(1.05); /* Efecto de escala para un ligero aumento */
 }
 
-/* Centrar los botones en su contenedor */
+/* Estilos CSS adicionales */
 .button-container {
   display: flex;
-  justify-content: center; /* Centra horizontalmente */
-  align-items: center; /* Centra verticalmente */
-  flex-wrap: wrap; /* Permite que los botones se muevan a la siguiente línea si es necesario */
-  height: 100vh; /* Altura del contenedor para centrar verticalmente */
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* O la altura que desees */
+  flex-wrap: wrap;  /* Allow buttons to wrap to the next line if necessary */
+  
 }
 
-
-/* boton de MAS INFO  */
-
-/* Estilos del contenedor para centrar el botón */
-.button-container {
-  display: flex;
-  justify-content: center; /* Centrar horizontalmente */
-  align-items: center; /* Centrar verticalmente */
-  height: 100vh; /* Altura de la ventana del navegador */
+.centered-button {
+  text-align: center;
 }
+
 
 /* Estilos del botón */
 .more-info-button {

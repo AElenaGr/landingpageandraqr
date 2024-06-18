@@ -12,6 +12,9 @@ import Tabs from "../components/tabs";
 import MapaConMarcador from "../components/mapa";
 import 'leaflet/dist/leaflet.css'; // Import Leaflet CSS
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faQuestion } from '@fortawesome/free-solid-svg-icons'; // Import the specific icon
+
 function Crearqr() {
   const [latLng, setLatLng] = useState(null);
   const [inputValue, setInputValue] = useState("");
@@ -89,12 +92,11 @@ function Crearqr() {
     setShowModal(false);
   };
 
-
   const containerStyle = {
     padding: "1px",
     textAlign: "center",
-    width: "80%", // Reducir el ancho al 80% del contenedor padre
-    height: "80%", // Reducir la altura al 80% del contenedor padre
+    width: "100%", // Reducir el ancho al 80% del contenedor padre
+    height: "100%", // Reducir la altura al 80% del contenedor padre
     margin: "auto",
     marginTop: ".5em",
     justifyContent: "center",
@@ -217,7 +219,7 @@ function Crearqr() {
       <div style={containerStyle}>
         <div style={titleContainerStyle}>
           <h1 className="tituloqr">GENERADOR DE QR</h1>
-          <FaQuestionCircle style={helpIconStyle} onClick={handleHelpClick} />
+          <FontAwesomeIcon icon={faQuestion} style={helpIconStyle} onClick={handleHelpClick} />
         </div>
         <br />
         <Tabs activeTab={activeTab} setActiveTab={setActiveTab} />
@@ -254,16 +256,9 @@ function Crearqr() {
       </div>
       <Modal show={showModal} handleClose={handleCloseModal}>
         <h2>Instrucciones</h2>
-        <p>Selecciona la pestaña correspondiente y sigue las instrucciones:</p>
-        <ul>
-          <li><b>URL:</b> Introduce la URL que deseas convertir en un código QR.</li>
-          <li><b>Geolocalización:</b> Introduce las coordenadas de latitud y longitud para generar un QR de ubicación.</li>
-          <li><b>Texto:</b> Introduce el texto que deseas convertir en un código QR.</li>
-        </ul>
-        <p>Luego, selecciona el color y tamaño del QR utilizando las opciones disponibles.</p>
-        <p>Haz clic en los botones de descarga para obtener el QR en el formato deseado (PNG, JPG, SVG).</p>
+        <p>Esta página sirve para crear un código QR si introduces datos como URL, geolocalización o texto en los campos correspondientes. Selecciona el color y tamaño del QR utilizando las opciones disponibles y haz clic en los botones de descarga para obtener el QR en el formato deseado (PNG, JPG, SVG).</p>
       </Modal>
-      <CompaQr></CompaQr>
+      <CompaQr />
     </Layout>
   );
 }
