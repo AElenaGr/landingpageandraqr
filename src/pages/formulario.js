@@ -26,7 +26,7 @@ const EmployeeLoginForm = () => {
           <input type="password" id="password" name="password" required />
           <button type="submit">Ingresar</button>
 
-          <Link to="/registro" className="register-link">Registrarse</Link>
+          <Link to="/p-registro" className="register-link">Registrarse</Link>
         </form>
         
       </div>
