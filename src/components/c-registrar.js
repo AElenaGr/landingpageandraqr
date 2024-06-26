@@ -1,16 +1,20 @@
 import React, { useState } from "react";
+import './registro.css';
 
 const Registro = () => {
   const [nombre, setNombre] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [departamento, setDepartamento] = useState("");
+  const [delegacion, setDelegacion] = useState("");
   const [passwordVisible, setPasswordVisible] = useState(false);
+  const [message, setMessage] = useState('');
 
   const handleNombre = (e) => setNombre(e.target.value);
   const handleEmail = (e) => setEmail(e.target.value);
   const handlePassword = (e) => setPassword(e.target.value);
   const handleDepartamento = (e) => setDepartamento(e.target.value);
+  const handleDelegacion = (e) => setDelegacion(e.target.value);
   const togglePasswordVisibility = () => setPasswordVisible(!passwordVisible);
 
   const handleRegistro = async () => {
@@ -25,24 +29,25 @@ const Registro = () => {
           body: JSON.stringify({
             nombre: nombre,
             departamento: departamento,
+            delegacion: delegacion,
             email: email,
             password: password,
           }),
         }
       );
       const data = await response.json();
-      console.log(data);
+      // console.log(data);
+      setMessage(data.message);
+      // setMessage('Registro exitoso');/////////////////
       // setResServidor=(true)
-    } catch (error) {
-      console.error("Error registrando usuario", error);
-    }
+  } catch (error) {
+      console.error('Error registrando usuario', error);
+      setMessage('Error en el registro');
+  }
   };
 
   return (
-    <div>
-      {/* <div className='respuesta'>
-            {resServidor&& 'correcto'}
-          </div> */}
+    <div className="registro-form">
       <label htmlFor="nombre">Nombre:</label>
       <input
         type="text"
@@ -51,14 +56,24 @@ const Registro = () => {
         value={nombre}
         onChange={handleNombre}
       />
-      <label htmlFor="departamento">Departamento:</label>
+      {/* <label htmlFor="departamento">Departamento:</label>
       <input
         type="text"
         placeholder="Introduce tu departamento"
         id="departamento"
         value={departamento}
         onChange={handleDepartamento}
-      />
+      /> */}
+      <label htmlFor="delegacion">Delegación:</label>
+      <select id="delegacion" value={delegacion} onChange={handleDelegacion}>
+        <option value="">Selecciona tu delegación</option>
+        <option value="Delegacion1">Aranjuez - Madrid</option>
+        <option value="Delegacion2">El Pardo - Madrid </option>
+        <option value="Delegacion3">San Ildefonso - Segovia</option>
+        <option value="Delegacion3">San Jerónimo de Yuste - Cáceres</option>
+        <option value="Delegacion3"> San Lorenzo de El Escorial - Madrid</option>
+        {/* Añade más opciones según sea necesario */}
+      </select>
       <label htmlFor="email">Email:</label>
       <input
         type="text"
@@ -94,6 +109,8 @@ const Registro = () => {
         </button>
       </div>
       <button onClick={handleRegistro}>Registro</button>
+       {/* SACAR MENSAJE EN PANTALLA */}
+      {message && <p>{message}</p>}
     </div>
   );
 };

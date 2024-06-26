@@ -1,0 +1,67 @@
+/* Formulario de Registro */
+.form-register {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(131, 233, 180, 0.1);
+}
+.form-register h2 {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  text-align: center;
+}
+.form-group {
+  margin-bottom: 1.5rem;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.form-group input:focus,
+.form-group select:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 5px rgba(54, 17, 148, 0.5);
+  outline: none;
+}
+.form-group .error {
+  color: red;
+  font-size: 0.875rem;
+}
+.form-group .success {
+  color: green;
+  font-size: 0.875rem;
+}
+.submit-btn {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--color-primary);
+  color: #fff;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.submit-btn:hover {
+  background-color: darken(var(--color-primary), 10%);
+}
+
+/* Mensaje de Éxito */
+.success-message {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 1rem;
+  border: 1px solid #c3e6cb;
+  border-radius: 5px;
+  margin-top: 1.5rem;
+}

@@ -31,15 +31,17 @@ const Login = () => {
   return (
     <div>
       <h3>Acceso empleados</h3>
+      <label htmlFor="nombre">Correo electrónico:</label>
       <input
         type="email"
-        placeholder="Email"
+        placeholder="correo electrónico"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
       />
+      <label htmlFor="nombre">Contraseña:</label>
       <input
         type="password"
-        placeholder="Password"
+        placeholder="contraseña"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
