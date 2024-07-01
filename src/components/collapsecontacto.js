@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Collapse, Button, CardBody, Card } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Asegúrate de importar los estilos de Bootstrap
-import './layout.css'; // Importa el archivo CSS correctamente
+import './css/layout.css'; // Importa el archivo CSS correctamente
 
 function CollapseContacto(args) {
   const [isOpen, setIsOpen] = useState(false);

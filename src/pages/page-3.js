@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '../components/layout';
-import '../components/layout.css';
+import '../components/css/layout.css';
 import TandemButton from '../components/button';
 import { StaticImage } from 'gatsby-plugin-image';
 

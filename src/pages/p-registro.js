@@ -23,12 +23,6 @@ const Register = () => {
           <Registro></Registro>
         </div>
       </div>
-      <a href="/" role="button" className="button">
-        Volver a inicio
-      </a>
-      <a href="/inicio" role="button" className="button">
-        Siguiente
-      </a>
     </Layout>
   )
 }

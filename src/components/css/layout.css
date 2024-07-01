@@ -52,7 +52,8 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../images/ffuente.jpg");
+  background-image: url('../../images/ffuente.jpg');
+
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0.5; /* Ajusta la opacidad según sea necesario */
@@ -353,68 +354,6 @@ footer {
 
 
 
-/* BOTONES  */
-
-.botones {
-  text-align: center;
-  padding: 2em;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-}
-
-
-.button {
-  display: inline-block; /* Asegura que se comporta como un bloque en línea */
-  margin: 10px; /* Espaciado alrededor de los botones */
-  padding: 10px 20px; /* Espaciado interno del botón */
-  border-radius: 10px; /* Redondear los bordes */
-  background: linear-gradient(to right, #71a7c0, #aaccdb, #faf9f9)!important; /* Gradiente radial */
-  color: rgb(10, 10, 10); /* Color del texto */
-  border: 1px solid #000000; /* Bordes negros */
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease; /* Transición para el hover */
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Sombra para efecto de relieve */
-  text-align: center; /* Centra el texto dentro del botón */
-}
-
-.button:hover {
-  font-style: italic;
-  background-color: #a59a80; /* Color de fondo para un estilo más serio */
-  transform: scale(1.05); /* Efecto de escala para un ligero aumento */
-}
-
-/* Estilos CSS adicionales */
-.button-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* O la altura que desees */
-  flex-wrap: wrap;  /* Allow buttons to wrap to the next line if necessary */
-  
-}
-
-.centered-button {
-  text-align: center;
-}
-
-
-/* Estilos del botón */
-.more-info-button {
-  font-size: 1em;
-  margin-bottom: 1rem;
-  padding: 0.5em 1em;
-  background: linear-gradient(to right,#71a7c0, #aaccdb, #faf9f9);  /* Gradiente radial como fondo inicial */
-  
-  color: rgb(0, 0, 0); /* Color del texto del botón */
-  cursor: pointer; /* Cambia el cursor al pasar por el botón */
-  transition: all 0.3s ease; /* Transición suave para el hover */
-  border: 1px solid #000000;
-}
-
-.more-info-button:hover {
-  font-style: italic;
-}
 
 .card-body-custom {
   background: radial-gradient(#506A76,
@@ -501,12 +440,14 @@ footer {
 .login-form-container {
   max-width: 800px; /* Ancho máximo del contenedor */
   margin: auto; /* Centrar el contenedor en la página */
-  padding: 20px; /* Espacio interno */
+  padding: 30px; /* Espacio interno */
 }
 
 .login-form {
   display: flex;
   flex-direction: column;
+  /* background-image: url("../images/ffuente.jpg");
+  opacity: 0.5; Ajusta la opacidad según sea necesario */
 }
 
 .login-form label,
@@ -540,17 +481,7 @@ footer {
 /* ............................................................................... */
 /* botones */
 
-/* src/components/index.module.css */
-.layoute {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh; /* Ajusta esta altura según sea necesario */
-  text-align: center;
-  background-color: #e6edf5;
-  box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.3);
-}
+
 
 .textCenter {
   margin-bottom: 20px; /* Ajusta el margen según sea necesario */

@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react"
 import Layout from "../components/layout"
-import "../components/layout.css"
+import "../components/css/layout.css"
 import MyComponent from "../components/select"
 import QRCode from "qrcode.react"
 import { toPng, toJpeg, toSvg } from "html-to-image"

@@ -1,0 +1,81 @@
+/* BOTONES */
+
+.botones {
+  text-align: center;
+  padding: 2em;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* O la altura que desees */
+  flex-wrap: wrap; /* Permite que los botones se envuelvan a la siguiente línea si es necesario */
+}
+
+.TandemButton {
+  display: inline-block; /* Asegura que se comporta como un bloque en línea */
+  margin: 10px; /* Espaciado alrededor de los botones */
+  padding: 10px 20px; /* Espaciado interno del botón */
+  border-radius: 10px; /* Redondear los bordes */
+  background: linear-gradient(to right, #71a7c0, #aaccdb, #faf9f9)!important; /* Gradiente radial */
+  color: rgb(10, 10, 10); /* Color del texto */
+  border: 1px solid #000000; /* Bordes negros */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Transición para el hover */
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Sombra para efecto de relieve */
+  text-align: center; /* Centra el texto dentro del botón */
+}
+
+.TandemButton:hover {
+  font-style: italic;
+  background-color: #a59a80; /* Color de fondo para un estilo más serio */
+  transform: scale(1.05); /* Efecto de escala para un ligero aumento */
+}
+
+.more-info-button {
+  font-size: 1em;
+  margin-bottom: 1rem;
+  padding: 0.5em 1em;
+  background: linear-gradient(to right,#71a7c0, #aaccdb, #faf9f9); /* Gradiente radial como fondo inicial */
+  color: rgb(0, 0, 0); /* Color del texto del botón */
+  cursor: pointer; /* Cambia el cursor al pasar por el botón */
+  transition: all 0.3s ease; /* Transición suave para el hover */
+  border: 1px solid #000000;
+}
+
+.more-info-button:hover {
+  font-style: italic;
+}
+
+.centered-button {
+  text-align: center;
+}
+
+
+.TandemButton {
+  font-size: 1.2em;
+  margin: 0.2em;
+  text-align: center;
+  padding: 0.5em 1em;
+  background: linear-gradient(0deg, rgba(173,195,34,1) 0%, rgba(253,187,45,1) 100%);
+  color: #fff;
+  display: inline-block;
+  border-radius: 10px;
+  border: 1px solid #000000;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+}
+
+.TandemButton:hover {
+  font-style: italic;
+  background-color: #a59a80;
+  transform: scale(1.05);
+}
+
+
+

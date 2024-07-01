@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from '../components/layout'
 import Accordion from '../components/accordion'
-import '../components/layout.css'
+import '../components/css/layout.css'
 
 const PoliticaDePrivacidad = () => {
   const accordionItems = [

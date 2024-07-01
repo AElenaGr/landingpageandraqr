@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import './registro.css';
+import './css/registro.css';
 
 const Registro = () => {
   const [nombre, setNombre] = useState("");

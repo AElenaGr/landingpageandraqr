@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "gatsby"; // Importa el componente Link de Gatsby
 import { StaticImage } from "gatsby-plugin-image";
 import { FaInstagram, FaTwitter, FaFacebook, FaLinkedin } from 'react-icons/fa';
-import "./layout.css";
+import "./css/layout.css";
 
 const Footer = () => {
   return (

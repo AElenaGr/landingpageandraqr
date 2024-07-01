@@ -2,7 +2,7 @@ import * as React from "react"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from "./header"
 import Footer from "./footer"
-import "./layout.css"
+import "./css/layout.css"
 
 const Layout = ({ children }) => (
   <>
