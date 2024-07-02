@@ -8,7 +8,9 @@ import TandemButton from "../components/button";
 
 function Inicio(){
   return(
+    
 <Layout>
+{/* <p>¡Bienvenido {localStorage.getItem('tandem_nombre')}!</p> */}
   <div className="qrinicio">
     <h1>GENERADOR DE QR</h1>
   <StaticImage
@@ -23,7 +25,7 @@ function Inicio(){
       <br></br>
     <TandemButton enlace="/crear-qr" >Crear QR</TandemButton>
   </div>
-  
+
   
 
   <a href="/" role='button' className='button'>Volver a inicio</a>

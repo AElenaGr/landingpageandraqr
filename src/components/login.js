@@ -19,14 +19,13 @@ const Login = () => {
       })
       const data = await response.json()
       if (data.message === 'Login exitoso') {
-        console.log(data.user)
-        setMessage('Login exitoso')
+        localStorage.setItem('tandem_nombre', data.user.nombre);
 
         // Guardar el usuario en el almacenamiento local
         localStorage.setItem('loggedInUser', JSON.stringify(data.user))
 
-        // Redirigir a la página de usuario
-        navigate('/user')
+        // Redirigir a la página de crear QR
+        navigate('/crear-qr')
       } else {
         setMessage('Credenciales incorrectas')
       }

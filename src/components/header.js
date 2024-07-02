@@ -1,3 +1,5 @@
+// src/components/header.js
+
 import * as React from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
@@ -6,16 +8,16 @@ import { StaticImage } from "gatsby-plugin-image"
 import logoutIcon from "../images/logout-icon.png"
 
 const Header = () => {
-  // Obtiene el usuario logueado desde el almacenamiento local, asegurándose de verificar la disponibilidad de localStorage
-  const loggedInUser = typeof window !== 'undefined' ? JSON.parse(localStorage.getItem("loggedInUser")) : null;
+  // Obtiene el nombre del usuario desde el almacenamiento local
+  const tandemNombre = localStorage.getItem('tandem_nombre');
 
   // Función para manejar el logout
   const handleLogout = () => {
     // Elimina el usuario del almacenamiento local
-    localStorage.removeItem("loggedInUser")
+    localStorage.removeItem("tandem_nombre");
     // Redirige a la página de inicio
-    window.location.replace("/")
-  }
+    window.location.replace("/");
+  };
 
   return (
     <header
@@ -56,7 +58,7 @@ const Header = () => {
         >
           Acceso Empleados
         </Link>
-        {loggedInUser && (
+        {tandemNombre && (
           <>
             <span style={{ margin: "0 0.5rem" }}>|</span>
             <Link
@@ -89,12 +91,13 @@ const Header = () => {
         >
           Información Institucional
         </Link>
+        
       </nav>
 
-      {loggedInUser ? (
+      {tandemNombre ? (
         <div style={{ display: "flex", alignItems: "center" }}>
           <p style={{ marginRight: "1rem" }}>
-            Bienvenido, {loggedInUser.name}!
+            ¡Bienvenido, {tandemNombre}!
           </p>
           <button
             onClick={handleLogout}
