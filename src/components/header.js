@@ -1,5 +1,3 @@
-// src/components/header.js
-
 import * as React from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
@@ -8,8 +6,8 @@ import { StaticImage } from "gatsby-plugin-image"
 import logoutIcon from "../images/logout-icon.png"
 
 const Header = () => {
-  // Obtiene el usuario logueado desde el almacenamiento local
-  const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"))
+  // Obtiene el usuario logueado desde el almacenamiento local, asegurándose de verificar la disponibilidad de localStorage
+  const loggedInUser = typeof window !== 'undefined' ? JSON.parse(localStorage.getItem("loggedInUser")) : null;
 
   // Función para manejar el logout
   const handleLogout = () => {
