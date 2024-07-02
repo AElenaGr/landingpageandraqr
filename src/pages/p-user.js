@@ -18,7 +18,7 @@ const UserPage = () => {
     <Layout>
       {/* Puedes agregar SEO específico para esta página si es necesario */}
       <div>
-        <h2>Página de Perfil de Usuario</h2>
+        
         {/* Renderiza el componente UserProfile y pasa la prop user */}
         <UserProfile user={user} />
       </div>

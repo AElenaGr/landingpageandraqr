@@ -73,7 +73,7 @@ const Header = () => {
             </Link>
             <span style={{ margin: "0 0.5rem" }}>|</span>
             <Link
-              to="/p-perfil"
+              to="/p-user"
               style={{
                 margin: "0 1rem",
                 textDecoration: "none",

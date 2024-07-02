@@ -56,7 +56,9 @@ const Login = () => {
         onChange={(e) => setPassword(e.target.value)}
       />
       <button onClick={handleLogin} className='buform'>Entrar</button>
+      
       <p>{message}</p>
+      
       <a href="/contrasenia" role='button' className='aform'>¿Olvidaste tu contraseña?</a>
       <br></br>
       <a href="/p-registro" role='button' className='aform' >Registrarse</a>

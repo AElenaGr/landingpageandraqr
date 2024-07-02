@@ -1,4 +1,4 @@
-componente cerrar sesion import React from 'react'
+ import React from 'react'
 const CerrarSesion = ()=>{
     const handleCerrarSesion= ()=>{
         localStorage.removeItem('tndm_token')
