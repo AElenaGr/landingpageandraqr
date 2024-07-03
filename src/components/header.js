@@ -3,20 +3,13 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-
-// Importa el ícono de logout
 import logoutIcon from "../images/logout-icon.png"
 
 const Header = () => {
-  // Obtiene el nombre del usuario desde el almacenamiento local
-  // const tandemNombre = localStorage.getItem('tandem_nombre');
   const tandemNombre = typeof window !== 'undefined' ? window.localStorage.getItem('tandem_n') : null;
 
-  // Función para manejar el logout
   const handleLogout = () => {
-    // Elimina el usuario del almacenamiento local
     localStorage.removeItem("tandem_nombre");
-    // Redirige a la página de inicio
     window.location.replace("/");
   };
 
@@ -28,20 +21,20 @@ const Header = () => {
         display: `flex`,
         alignItems: `center`,
         justifyContent: `space-between`,
-        backgroundColor: `white`, // Banda blanca
-        width: `100%`, // Asegura que el header ocupe todo el ancho
-        borderBottom: `1px solid #ddd`, // Línea inferior sutil para separar
+        backgroundColor: `white`,
+        width: `100%`,
+        borderBottom: `1px solid #ddd`,
       }}
     >
       <Link to="/" style={{ display: `flex`, alignItems: `center` }}>
         <StaticImage
           src="../images/pn.png"
           loading="eager"
-          width={90} // Ajusta el tamaño según sea necesario
+          width={90}
           quality={95}
           formats={["auto", "webp", "avif"]}
           alt="Logo PN"
-          style={{ marginRight: `var(--space-3)` }} // Espacio entre logo y título
+          style={{ marginRight: `var(--space-3)` }}
         />
       </Link>
 
@@ -92,7 +85,6 @@ const Header = () => {
         >
           Información Institucional
         </Link>
-        
       </nav>
 
       {tandemNombre ? (
