@@ -6,8 +6,15 @@ import { StaticImage } from "gatsby-plugin-image"
 import logoutIcon from "../images/logout-icon.png"
 
 const Header = () => {
+<<<<<<< HEAD
   const tandemNombre = typeof window !== 'undefined' ? window.localStorage.getItem('tandem_n') : null;
 
+=======
+  // Obtiene el nombre del usuario desde el almacenamiento local
+  const tandemNombre = localStorage.getItem('tandem_nombre');
+<p>¡Hola {localStorage.getItem('tandem_nombre')}!</p>
+  // Función para manejar el logout
+>>>>>>> fe98625 (3 julio bueno final)
   const handleLogout = () => {
     localStorage.removeItem("tandem_nombre");
     window.location.replace("/");
@@ -67,7 +74,7 @@ const Header = () => {
             </Link>
             <span style={{ margin: "0 0.5rem" }}>|</span>
             <Link
-              to="/p-user"
+              to="/profile"
               style={{
                 margin: "0 1rem",
                 textDecoration: "none",

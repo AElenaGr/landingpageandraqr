@@ -1,9 +1,9 @@
  import React from 'react'
 const CerrarSesion = ()=>{
     const handleCerrarSesion= ()=>{
-        localStorage.removeItem('tndm_token')
-        localStorage.removeItem('tndm_id')
-        localStorage.removeItem('tndm_email')
+        localStorage.removeItem('tandem_nombre')
+        localStorage.removeItem('tandem_id')
+        localStorage.removeItem('tandem_email')
         window.location.href='/'
     }
     return (

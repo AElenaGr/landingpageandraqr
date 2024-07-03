@@ -20,6 +20,8 @@ const Login = () => {
       const data = await response.json()
       if (data.message === 'Login exitoso') {
         localStorage.setItem('tandem_nombre', data.user.nombre);
+        localStorage.setItem('tandem_email', data.user.email);
+        localStorage.setItem('tandem_id', data.user.id);
 
         // Guardar el usuario en el almacenamiento local
         localStorage.setItem('loggedInUser', JSON.stringify(data.user))
