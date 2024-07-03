@@ -9,7 +9,8 @@ import logoutIcon from "../images/logout-icon.png"
 
 const Header = () => {
   // Obtiene el nombre del usuario desde el almacenamiento local
-  const tandemNombre = localStorage.getItem('tandem_nombre');
+  // const tandemNombre = localStorage.getItem('tandem_nombre');
+  const tandemNombre = typeof window !== 'undefined' ? window.localStorage.getItem('tandem_n') : null;
 
   // Función para manejar el logout
   const handleLogout = () => {
