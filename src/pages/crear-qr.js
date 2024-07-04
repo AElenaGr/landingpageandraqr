@@ -10,7 +10,7 @@ import { FaQuestionCircle } from "react-icons/fa" // Import the help icon
 import Modal from "../components/modal" // Import the modal component
 import Tabs from "../components/tabs"
 import MapaConMarcador from "../components/mapa"
-// import "leaflet/dist/leaflet.css" // Import Leaflet CSS
+import "leaflet/dist/leaflet.css" // Import Leaflet CSS
 import SaveDb from "../components/savedb"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faQuestion } from "@fortawesome/free-solid-svg-icons" // Import the specific icon
