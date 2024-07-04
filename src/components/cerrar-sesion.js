@@ -1,4 +1,4 @@
- import React from 'react'
+import React from 'react'
 const CerrarSesion = ()=>{
     const handleCerrarSesion= ()=>{
         localStorage.removeItem('tandem_nombre')
