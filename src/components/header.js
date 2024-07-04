@@ -1,5 +1,3 @@
-// src/components/header.js
-
 import * as React from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
@@ -8,9 +6,16 @@ import { StaticImage } from "gatsby-plugin-image"
 import logoutIcon from "../images/logout-icon.png"
 
 const Header = () => {
-  // Obtiene el nombre del usuario desde el almacenamiento local
-  const tandemNombre = localStorage.getItem('tandem_nombre');
-<p>¡Hola {localStorage.getItem('tandem_nombre')}!</p>
+  const [tandemNombre, setTandemNombre] = React.useState('')
+
+  React.useEffect(() => {
+    if (typeof window !== 'undefined') {
+      // Accede a localStorage solo en el entorno del navegador
+      const nombre = localStorage.getItem('tandem_nombre');
+      setTandemNombre(nombre);
+    }
+  }, [])
+
   // Función para manejar el logout
   const handleLogout = () => {
     // Elimina el usuario del almacenamiento local
@@ -91,7 +96,6 @@ const Header = () => {
         >
           Información Institucional
         </Link>
-        
       </nav>
 
       {tandemNombre ? (
