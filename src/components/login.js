@@ -1,5 +1,3 @@
-// src/components/login.js
-
 import React, { useState } from 'react'
 import { navigate } from 'gatsby'
 
@@ -22,6 +20,7 @@ const Login = () => {
         localStorage.setItem('tandem_nombre', data.user.nombre);
         localStorage.setItem('tandem_email', data.user.email);
         localStorage.setItem('tandem_id', data.user.id);
+        localStorage.setItem('tandem_role', data.user.role); // Guardar el rol del usuario
 
         // Guardar el usuario en el almacenamiento local
         localStorage.setItem('loggedInUser', JSON.stringify(data.user))
