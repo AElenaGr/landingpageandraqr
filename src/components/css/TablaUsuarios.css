@@ -1,0 +1,73 @@
+.tabla-container {
+  margin-top: 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: rgb(193, 234, 252);
+  text-align: center;
+  overflow-x: auto; /* Permite el desplazamiento horizontal en pantallas pequeñas */
+  padding: 20px;
+  border: 3px solid #a62a2a;
+}
+
+.usuarios-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center; /* Centra los elementos en la línea */
+}
+
+.usuario-card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 15px;
+  width: 200px;
+  background-color: #f9f9f9;
+  text-align: center;
+  border: 3px solid #a62a2a;
+}
+
+.usuario-imagen {
+  width: 100%;
+  height: auto;
+  border-radius: 5%;
+  border: 3px solid #a62a2a;
+}
+
+.usuario-card p {
+  margin: 5px 0;
+}
+
+.usuario-card button {
+  margin-right: 10px;
+}
+
+.change-role {
+  margin-top: 10px;
+}
+
+.change-role select {
+  margin-right: 10px;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  z-index: 1000;
+}
+
+@media (max-width: 768px) {
+  .usuarios-grid {
+    flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+    align-items: center; /* Centra los elementos en la columna */
+  }
+
+  .usuario-card {
+    width: 90%; /* Ajusta el ancho al 90% en pantallas pequeñas */
+    margin-bottom: 20px; /* Espacio entre tarjetas en pantallas pequeñas */
+  }
+}
