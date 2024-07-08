@@ -1,5 +1,3 @@
-// Header.js
-
 import React, { useState, useEffect } from 'react';
 import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
@@ -7,16 +5,20 @@ import logoutIcon from '../images/logout-icon.png';
 
 const Header = () => {
   const [tandemNombre, setTandemNombre] = useState('');
+  const [tandemRole, setTandemRole] = useState('');
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
       const nombre = localStorage.getItem('tandem_nombre');
+      const role = localStorage.getItem('tandem_role'); // Asume que el rol está almacenado en localStorage
       setTandemNombre(nombre);
+      setTandemRole(role);
     }
   }, []);
 
   const handleLogout = () => {
     localStorage.removeItem('tandem_nombre');
+    localStorage.removeItem('tandem_role'); // Asegúrate de eliminar el rol al cerrar sesión
     window.location.replace('/');
   };
 
@@ -46,10 +48,6 @@ const Header = () => {
       </Link>
 
       <nav style={{ display: 'flex', alignItems: 'center' }}>
-        <Link to="/" style={{ margin: '0 1rem', textDecoration: 'none', color: 'black' }}>
-          Inicio
-        </Link>
-        <span style={{ margin: '0 0.5rem' }}>|</span>
         <Link to="/formulario" style={{ margin: '0 1rem', textDecoration: 'none', color: 'black' }}>
           Acceso Empleados
         </Link>
@@ -71,6 +69,14 @@ const Header = () => {
             <Link to="/p-soporte" style={{ margin: '0 1rem', textDecoration: 'none', color: 'black' }}>
               Soporte Técnico
             </Link>
+            {tandemRole === 'admin' && (
+              <>
+                <span style={{ margin: '0 0.5rem' }}>|</span>
+                <Link to="/admin-user" style={{ margin: '0 1rem', textDecoration: 'none', color: 'black' }}>
+                  Admin User
+                </Link>
+              </>
+            )}
           </>
         )}
       </nav>
