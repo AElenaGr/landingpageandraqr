@@ -6,14 +6,11 @@ import QRCode from "qrcode.react"
 import { toPng, toJpeg, toSvg } from "html-to-image"
 import download from "downloadjs"
 import CompaQr from "../components/compa"
-import { FaQuestionCircle } from "react-icons/fa" // Import the help icon
 import Modal from "../components/modal" // Import the modal component
 import Tabs from "../components/tabs"
 import MapaConMarcador from "../components/mapa"
 import "leaflet/dist/leaflet.css" // Import Leaflet CSS
 import SaveDb from "../components/savedb"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faQuestion } from "@fortawesome/free-solid-svg-icons" // Import the specific icon
 
 function Crearqr() {
   const [latLng, setLatLng] = useState(null)
@@ -257,11 +254,6 @@ function Crearqr() {
       <div style={containerStyle}>
         <div style={titleContainerStyle}>
           <h1 className="tituloqr">GENERADOR DE QR</h1>
-          <FontAwesomeIcon
-            icon={faQuestion}
-            style={helpIconStyle}
-            onClick={handleHelpClick}
-          />
         </div>
         <br />
         <Tabs activeTab={activeTab} setActiveTab={setActiveTab} />

@@ -1,41 +1,39 @@
+/* Estilos generales */
 .tabla-container {
   margin-top: 10px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   background-color: rgb(193, 234, 252);
   text-align: center;
   overflow-x: auto; /* Permite el desplazamiento horizontal en pantallas pequeñas */
-  padding: 20px;
+  padding: 10px;
   border: 3px solid #a62a2a;
 }
 
+/* Grid de usuarios */
 .usuarios-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Exactamente 5 columnas */
+  gap: 20px;
   justify-content: center; /* Centra los elementos en la línea */
+  padding: 20px; /* Añadir padding alrededor del grid */
 }
 
 .usuario-card {
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 15px;
-  width: 200px;
   background-color: #f9f9f9;
   text-align: center;
   border: 3px solid #a62a2a;
 }
 
-/* TablaUsuarios.css */
-
+/* Imagen del usuario */
 .usuario-imagen {
   width: 80px; /* Ajusta el tamaño según tus necesidades */
   height: 80px; /* Ajusta el tamaño según tus necesidades */
   border-radius: 50%; /* Para hacer la imagen redonda */
   object-fit: cover; /* Para ajustar la imagen sin distorsionar */
 }
-
-
-
 
 .usuario-card p {
   margin: 5px 0;
@@ -45,6 +43,7 @@
   margin-right: 10px;
 }
 
+/* Cambiar rol */
 .change-role {
   margin-top: 10px;
 }
@@ -53,6 +52,7 @@
   margin-right: 10px;
 }
 
+/* Modal */
 .modal {
   position: fixed;
   top: 0;
@@ -75,17 +75,32 @@
   width: 100%;
 }
 
+/* Responsive */
+@media (max-width: 1200px) {
+  .usuarios-grid {
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas en pantallas medianas */
+  }
+}
 
-
+@media (max-width: 992px) {
+  .usuarios-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas en pantallas pequeñas */
+  }
+}
 
 @media (max-width: 768px) {
   .usuarios-grid {
-    flex-direction: column; /* Cambia a columna en pantallas pequeñas */
-    align-items: center; /* Centra los elementos en la columna */
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas más pequeñas */
   }
 
   .usuario-card {
-    width: 90%; /* Ajusta el ancho al 90% en pantallas pequeñas */
+    width: 100%; /* Ajusta el ancho al 100% en pantallas pequeñas */
     margin-bottom: 20px; /* Espacio entre tarjetas en pantallas pequeñas */
+  }
+}
+
+@media (max-width: 480px) {
+  .usuarios-grid {
+    grid-template-columns: 1fr; /* 1 columna en pantallas muy pequeñas */
   }
 }

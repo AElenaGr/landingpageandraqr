@@ -11,9 +11,10 @@ const UpdateUser = ({ user, onClose, onUpdate }) => {
     e.preventDefault();
     const updatedData = { nombre, password, delegacion, role };
     const response = await onUpdate(user.email, updatedData);
+    console.log('Update form response:', response); // Log the response from the handleUpdate function
     if (response.success) {
       setMessage('Datos actualizados correctamente');
-      onClose(); // Cerrar el modal después de actualizar los datos
+      onClose();
     } else {
       setMessage(response.message || 'Error al actualizar los datos del usuario');
     }
@@ -51,7 +52,7 @@ const UpdateUser = ({ user, onClose, onUpdate }) => {
             </select>
           </label>
         </div>
-        <button type="submit">Actualizar Datos</button>
+        <button type="submit">Guardar Cambios</button>
         {message && <p>{message}</p>}
       </form>
       <button onClick={onClose}>Cerrar</button>
