@@ -1,4 +1,3 @@
-/* Estilos generales */
 .tabla-container {
   margin-top: 10px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
@@ -6,9 +5,8 @@
   text-align: center;
   overflow-x: auto; /* Permite el desplazamiento horizontal en pantallas pequeñas */
   padding: 10px;
-  border: 3px solid #a62a2a;
+  border: 3px solid #A62A2A;
 }
-
 /* Grid de usuarios */
 .usuarios-grid {
   display: grid;
@@ -17,41 +15,39 @@
   justify-content: center; /* Centra los elementos en la línea */
   padding: 20px; /* Añadir padding alrededor del grid */
 }
-
 .usuario-card {
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 15px;
-  background-color: #f9f9f9;
+  background-color: #F9F9F9;
   text-align: center;
-  border: 3px solid #a62a2a;
+  border: 3px solid #A62A2A;
+  min-width: 200px; /* Establece un ancho mínimo */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distribuye el contenido verticalmente */
 }
 
-/* Imagen del usuario */
 .usuario-imagen {
   width: 80px; /* Ajusta el tamaño según tus necesidades */
   height: 80px; /* Ajusta el tamaño según tus necesidades */
   border-radius: 50%; /* Para hacer la imagen redonda */
   object-fit: cover; /* Para ajustar la imagen sin distorsionar */
+  align-self: center; /* Centra la imagen dentro del contenedor flex */
 }
-
 .usuario-card p {
   margin: 5px 0;
 }
-
 .usuario-card button {
   margin-right: 10px;
 }
-
 /* Cambiar rol */
 .change-role {
   margin-top: 10px;
 }
-
 .change-role select {
   margin-right: 10px;
 }
-
 /* Modal */
 .modal {
   position: fixed;
@@ -65,40 +61,46 @@
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1000;
 }
-
 .modal-content {
+  position: relative;
   background-color: white;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   max-width: 500px;
   width: 100%;
+  z-index: 1100; /* Asegura que el contenido del modal esté por encima del fondo semi-transparente */
 }
-
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 1200; /* Asegura que el botón de cerrar esté por encima del contenido del modal */
+}
 /* Responsive */
 @media (max-width: 1200px) {
   .usuarios-grid {
     grid-template-columns: repeat(4, 1fr); /* 4 columnas en pantallas medianas */
   }
 }
-
 @media (max-width: 992px) {
   .usuarios-grid {
     grid-template-columns: repeat(3, 1fr); /* 3 columnas en pantallas pequeñas */
   }
 }
-
 @media (max-width: 768px) {
   .usuarios-grid {
     grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas más pequeñas */
   }
-
   .usuario-card {
     width: 100%; /* Ajusta el ancho al 100% en pantallas pequeñas */
     margin-bottom: 20px; /* Espacio entre tarjetas en pantallas pequeñas */
   }
 }
-
 @media (max-width: 480px) {
   .usuarios-grid {
     grid-template-columns: 1fr; /* 1 columna en pantallas muy pequeñas */

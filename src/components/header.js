@@ -69,6 +69,10 @@ const Header = () => {
             <Link to="/p-soporte" style={{ margin: '0 1rem', textDecoration: 'none', color: 'black' }}>
               Soporte Técnico
             </Link>
+            <span style={{ margin: '0 0.5rem' }}>|</span>
+            <Link to="/list-qr" style={{ margin: '0 1rem', textDecoration: 'none', color: 'black' }}>
+              Lista QR
+            </Link>
             {tandemRole === 'admin' && (
               <>
                 <span style={{ margin: '0 0.5rem' }}>|</span>

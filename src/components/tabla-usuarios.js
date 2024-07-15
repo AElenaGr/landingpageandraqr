@@ -58,6 +58,29 @@ function TablaUsuarios({ url }) {
     }
   };
 
+  const handleDeleteUser = async (email) => {
+    try {
+      const response = await fetch(`http://localhost/api-qr-tandem/v1/delete-user.php`, {
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ email })
+      });
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      const data = await response.json();
+      if (data.success) {
+        setUsers(users.filter(user => user.email !== email)); // Eliminar usuario del estado local
+      }
+      return data;
+    } catch (error) {
+      console.error('Error al eliminar el usuario', error);
+      return { success: false, message: 'Error al eliminar el usuario' };
+    }
+  };
+
   return (
     <div className="usuarios-grid">
       {users.map(user => (
@@ -73,11 +96,15 @@ function TablaUsuarios({ url }) {
           <p>Delegación: {user.delegacion}</p>
           <p>Rol: {user.role}</p>
           <button onClick={() => handleEditUser(user)}>Editar Usuario</button>
+          <button onClick={() => handleDeleteUser(user.email)}>Eliminar Usuario</button>
         </div>
       ))}
       {editingUser && (
         <div className="modal">
-          <UpdateUser user={editingUser} onClose={handleCloseModal} onUpdate={handleUpdateUser} />
+          <div className="modal-content">
+            <button className="close-modal" onClick={handleCloseModal}>X</button>
+            <UpdateUser user={editingUser} onClose={handleCloseModal} onUpdate={handleUpdateUser} />
+          </div>
         </div>
       )}
     </div>

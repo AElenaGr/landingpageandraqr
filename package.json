@@ -30,10 +30,13 @@
     "react-leaflet": "^4.2.1",
     "react-qrious": "^2.5.6",
     "react-share": "^5.1.0",
-    "reactstrap": "^9.2.2"
+    "reactstrap": "^9.2.2",
+    "styled-components": "^6.1.11"
   },
   "devDependencies": {
-    "prettier": "^2.8.8"
+    "css-loader": "^7.1.2",
+    "prettier": "^2.8.8",
+    "style-loader": "^4.0.0"
   },
   "keywords": [
     "gatsby"
