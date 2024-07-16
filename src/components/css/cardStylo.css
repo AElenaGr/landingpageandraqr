@@ -1,0 +1,46 @@
+.cardStylo {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  max-width: 300px;
+  margin: 16px auto;
+}
+
+.cardImage {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.layout {
+  padding: 16px;
+}
+
+.content {
+  display: flex;
+  align-items: flex-start; /* Align items to the start of the container */
+  justify-content: space-between; /* Distribute space between items */
+  background-color: #c8d1e0;
+}
+
+.content > div {
+  flex: 1;
+  margin: 16px;
+}
+
+.titulo {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+/* Media Query for screens smaller than 768px */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+  }
+
+  .content > div {
+    margin: 16px 0; /* Add vertical margin */
+  }
+}
