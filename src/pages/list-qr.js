@@ -77,4 +77,4 @@ const QrCodeList = () => {
   );
 };
 
-export default QrCodeList;
+export default QrCodeList; 

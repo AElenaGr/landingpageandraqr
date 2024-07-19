@@ -7,6 +7,7 @@ import Seo from "../components/seo"
 import CarousselApp from "../components/caroussel"
 import CollapseContacto from "../components/collapsecontacto"
 
+
 const IndexPage = () => (
   <Layout>
     <div className="layoute">
@@ -20,6 +21,7 @@ const IndexPage = () => (
       </div>
     </div>
     <CollapseContacto />
+  
   </Layout>
 )
 
