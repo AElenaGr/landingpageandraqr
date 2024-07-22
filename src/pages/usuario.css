@@ -1,0 +1,265 @@
+/* Contenedor principal que centra el perfil en la pantalla */
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh; /* Ajustado para ser más pequeño que el 100% de la altura de la ventana */
+  background-color: rgba(240, 240, 240, 0.9); /* Fondo gris claro con transparencia */
+  padding: 0 10px; /* Añadido padding para ajustar el espacio alrededor del contenido */
+  box-sizing: border-box;
+  border-radius: 35px;
+  border: 2px solid #F99194; /* Borde de color #F99194 */
+}
+
+
+
+/* Tarjeta del perfil con un diseño más moderno */
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  max-width: 420px;
+  width: 100%;
+  border: 2px solid #F99194; /* Borde de color #F99194 */
+  
+}
+
+/* Imagen de perfil con un diseño más estilizado */
+.profile-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 4px solid #007bff;
+}
+
+/* Información del perfil */
+.profile-info {
+  width: 100%;
+}
+
+/* Elemento de información con un diseño más moderno */
+.profile-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.profile-item:last-child {
+  border-bottom: none;
+}
+
+/* Etiquetas de información con color y estilo mejorado */
+.profile-label {
+  font-weight: 600;
+  color: #333;
+}
+
+.profile-data {
+  color: #666;
+}
+
+/* Botón de acción con estilo mejorado */
+.aform {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.aform:hover {
+  background-color: #0056b3;
+  cursor: pointer;
+}
+a/* Estilos generales para pantallas grandes (escritorios y monitores) */
+
+/* Contenedor principal que centra el perfil en la pantalla */
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgba(240, 240, 240, 0.9); /* Fondo gris claro con transparencia */
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Tarjeta del perfil con un diseño más moderno */
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  max-width: 420px;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+/* Imagen de perfil con un diseño más estilizado */
+.profile-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 4px solid #007bff;
+}
+
+/* Información del perfil */
+.profile-info {
+  width: 100%;
+}
+
+/* Elemento de información con un diseño más moderno */
+.profile-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.profile-item:last-child {
+  border-bottom: none;
+}
+
+/* Etiquetas de información con color y estilo mejorado */
+.profile-label {
+  font-weight: 600;
+  color: #333;
+}
+
+.profile-data {
+  color: #666;
+}
+
+/* Botón de acción con estilo mejorado */
+.aform {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.aform:hover {
+  background-color: #0056b3;
+  cursor: pointer;
+}
+
+
+/* Estilo del botón */
+button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 15px; /* Bordes redondeados para el botón */
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: inherit;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+
+/* Media Query para tabletas (768px y más) */
+@media (max-width: 1024px) {
+  .profile-card {
+    padding: 20px;
+    max-width: 90%;
+  }
+
+  .profile-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .aform {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
+/* Media Query para móviles (480px y más) */
+@media (max-width: 768px) {
+  .profile-card {
+    padding: 15px;
+    max-width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .profile-image {
+    width: 80px;
+    height: 80px;
+  }
+
+  .profile-item {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 0;
+  }
+
+  .profile-label {
+    font-size: 14px;
+  }
+
+  .profile-data {
+    font-size: 14px;
+  }
+
+  .aform {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+}
+
+/* Media Query para dispositivos muy pequeños (móviles muy pequeños) */
+@media (max-width: 480px) {
+  .profile-card {
+    padding: 10px;
+  }
+
+  .profile-item {
+    font-size: 12px;
+  }
+
+  .profile-label {
+    font-size: 12px;
+  }
+
+  .profile-data {
+    font-size: 12px;
+  }
+
+  .aform {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+}

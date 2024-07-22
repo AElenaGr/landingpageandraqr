@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './contrasena.css';
 
 const ForgotPassword = () => {
   const [email, setEmail] = useState('');

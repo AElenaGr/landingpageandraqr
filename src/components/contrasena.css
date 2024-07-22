@@ -1,0 +1,99 @@
+/* Contenedor principal para la página de cambio de contraseña */
+.containerAcceso {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh; /* Ajustado para ser más pequeño que el 100% de la altura de la ventana */
+  background-color: rgba(240, 240, 240, 0.9); /* Fondo gris claro con transparencia */
+  padding: 0 10px; /* Añadido padding para ajustar el espacio alrededor del contenido */
+  box-sizing: border-box;
+  border-radius: 35px;
+  border: 2px solid #F99194; /* Borde de color #F99194 */
+}
+
+/* Contenedor del formulario */
+.imageFondo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px; /* Bordes redondeados para el contenedor del formulario */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+}
+
+/* Título del formulario */
+h3 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Estilo para el formulario */
+.formAcceso {
+  width: 100%;
+}
+
+/* Lista de elementos del formulario */
+.lista {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Elemento de la lista para campos del formulario */
+.lista li {
+  margin-bottom: 20px;
+}
+
+/* Estilo del contenedor de los inputs */
+.icono, .icono2 {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estilo para los inputs */
+input[type="text"], input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px; /* Bordes redondeados para los inputs */
+  font-size: 16px;
+  color: #333;
+}
+
+/* Etiqueta para los inputs (espacio reservado para futuros iconos o etiquetas) */
+.label {
+  margin-top: 5px;
+}
+
+/* Mensajes de éxito o error */
+.message {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #d9534f; /* Color de error (rojo) */
+}
+
+/* Estilo del botón */
+button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 15px; /* Bordes redondeados para el botón */
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
