@@ -40,7 +40,7 @@ function TablaUsuarios({ url }) {
 
   const handleUpdateUser = async (email, updatedData) => {
     try {
-      const response = await fetch(`http://localhost/api-qr-tandem/v1/update-user.php`, {
+      const response = await fetch(`https://andra.tandempatrimonionacional.eu/api-qr-tandem/v1/update-user.php`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json'
@@ -60,7 +60,7 @@ function TablaUsuarios({ url }) {
 
   const handleDeleteUser = async (email) => {
     try {
-      const response = await fetch(`http://localhost/api-qr-tandem/v1/delete-user.php`, {
+      const response = await fetch(`https://andra.tandempatrimonionacional.eu/api-qr-tandem/v1/delete-user.php`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json'

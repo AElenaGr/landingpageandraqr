@@ -1,0 +1,84 @@
+.header {
+  margin: 0 auto;
+  padding: var(--space-4) var(--size-gutter);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  color: black;
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+}
+
+.header.dark-mode {
+  background-color: #333;
+  color: white;
+  border-bottom: 1px solid #555;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-right: var(--space-3);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-item {
+  margin: 0 1rem;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+.nav-item a:hover {
+  color: var(--primary-color);
+}
+
+.right-section {
+  display: flex;
+  align-items: center;
+}
+
+.dark-mode-toggle {
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: inherit;
+  margin-right: 1rem;
+  font-size: 1.5rem;
+}
+
+.user-section {
+  display: flex;
+  align-items: center;
+}
+
+.user-section p {
+  margin-right: 1rem;
+}
+
+.logout-button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.logout-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.login-link {
+  text-decoration: none;
+  color: inherit;
+}

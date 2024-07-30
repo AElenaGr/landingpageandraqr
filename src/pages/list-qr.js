@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import QRCode from 'qrcode.react';
-import Layout from '../components/layout';
+import Layout from '../components/layout.js';
 import EliminarQR from '../components/eliminar-qr.js';
 import '../components/css/qrcodelist.css';
-
 
 const QrCodeList = () => {
   const [qrCodes, setQrCodes] = useState([]);
@@ -13,7 +12,7 @@ const QrCodeList = () => {
   useEffect(() => {
     const fetchQrCodes = async () => {
       try {
-        const response = await fetch('http://localhost/api-qr-tandem/v1/list-qr.php'); // Cambia esto a la URL correcta de tu API
+        const response = await fetch('https://andra.tandempatrimonionacional.eu/api-qr-tandem/v1/list-qr.php'); // Cambia esto a la URL correcta de tu API
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
@@ -29,6 +28,14 @@ const QrCodeList = () => {
     fetchQrCodes();
   }, []);
 
+  const addNewQrCode = (newQrCode) => {
+    setQrCodes([...qrCodes, newQrCode]);
+  };
+
+  const removeQrCode = (qrId) => {
+    setQrCodes(qrCodes.filter((qrCode) => qrCode.qr_id !== qrId));
+  };
+
   if (loading) {
     return <p>Cargando...</p>;
   }
@@ -39,42 +46,47 @@ const QrCodeList = () => {
 
   return (
     <Layout>
-    <div className="tablaqr">
-      <h2>Listado de Códigos QR</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>QR</th>
-            <th>ID</th>
-            <th>Data</th>
-            <th>Nombre Referencia</th>
-            <th>Descripción</th>
-            <th>Fecha Creación</th>
-            <th>ID Usuario</th>
-
-          </tr>
-        </thead>
-        <tbody>
-          {qrCodes.map((qrCode) => (
-            <tr key={qrCode.qr_id}>
-              <td><QRCode
-              value={qrCode.qr_data}
-            /></td>
-              <td>{qrCode.qr_id}</td>
-              <td>{qrCode.qr_data}</td>
-              <td>{qrCode.qr_nombre_ref}</td>
-              <td>{qrCode.qr_description}</td>
-              <td>{qrCode.qr_created_at}</td>
-              <td>{qrCode.user_id}</td>
-              <td><EliminarQR qr={qrCode.qr_nombre_ref}></EliminarQR></td>
-
+      <div className="tablaqr">
+        <h2>Listado de Códigos QR</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>QR</th>
+              <th>ID</th>
+              <th>Data</th>
+              <th>Nombre Referencia</th>
+              <th>Descripción</th>
+              <th>Fecha Creación</th>
+              <th>ID Usuario</th>
+              <th>Acciones</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
+          </thead>
+          <tbody>
+            {qrCodes.map((qrCode) => (
+              <tr key={qrCode.qr_id}>
+                <td>
+                  <QRCode
+                    value={qrCode.qr_data}
+                    size={100}
+                    fgColor={qrCode.qr_color || '#000000'} // Usa el color proporcionado o un color por defecto
+                  />
+                </td>
+                <td>{qrCode.qr_id}</td>
+                <td>{qrCode.qr_data}</td>
+                <td>{qrCode.qr_nombre_ref}</td>
+                <td>{qrCode.qr_description}</td>
+                <td>{qrCode.qr_created_at}</td>
+                <td>{qrCode.user_id}</td>
+                <td>
+                  <EliminarQR qrId={qrCode.qr_id} onRemove={removeQrCode} />
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </Layout>
   );
 };
 
-export default QrCodeList; 
+export default QrCodeList;

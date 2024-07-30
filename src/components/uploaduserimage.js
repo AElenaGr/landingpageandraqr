@@ -19,7 +19,7 @@ const UploadUserImage = ({idUser}) => {
         setLoading(true);
         setMessage('');
         try {
-            const response = await fetch('http://localhost/api-qr-tandem/v1/upload-image-user.php', {
+            const response = await fetch('https://andra.tandempatrimonionacional.eu/api-qr-tandem/v1/upload-image-user.php', {
                 method: 'POST',
                 body: formData,
             });

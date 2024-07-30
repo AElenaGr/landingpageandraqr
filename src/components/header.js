@@ -1,143 +1,103 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'gatsby';
-import { StaticImage } from 'gatsby-plugin-image';
-import logoutIcon from '../images/logout-icon.png';
+import React, { useState, useEffect } from "react"
+import { Link } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
+import logoutIcon from "../images/logout-icon.png"
+import "./css/header.css"
 
 const Header = () => {
-  const [tandemNombre, setTandemNombre] = useState('');
-  const [tandemRole, setTandemRole] = useState('');
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [tandemNombre, setTandemNombre] = useState("")
+  const [tandemRole, setTandemRole] = useState("")
+  const [isDarkMode, setIsDarkMode] = useState(false)
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const nombre = localStorage.getItem('tandem_nombre');
-      const role = localStorage.getItem('tandem_role');
-      const darkMode = localStorage.getItem('dark_mode') === 'true';
-      setTandemNombre(nombre);
-      setTandemRole(role);
-      setIsDarkMode(darkMode);
+    if (typeof window !== "undefined") {
+      const nombre = localStorage.getItem("tandem_nombre")
+      const role = localStorage.getItem("tandem_role")
+      const darkMode = localStorage.getItem("dark_mode") === "true"
+      setTandemNombre(nombre)
+      setTandemRole(role)
+      setIsDarkMode(darkMode)
     }
-  }, []);
+  }, [])
 
   const handleLogout = () => {
-    localStorage.removeItem('tandem_nombre');
-    localStorage.removeItem('tandem_role');
-    window.location.replace('/');
-  };
+    localStorage.removeItem("tandem_nombre")
+    localStorage.removeItem("tandem_role")
+    window.location.replace("/")
+  }
 
   const toggleDarkMode = () => {
-    const newMode = !isDarkMode;
-    setIsDarkMode(newMode);
-    localStorage.setItem('dark_mode', newMode);
-  };
+    const newMode = !isDarkMode
+    setIsDarkMode(newMode)
+    localStorage.setItem("dark_mode", newMode)
+  }
 
   return (
-    <header
-      style={{
-        margin: '0 auto',
-        padding: 'var(--space-4) var(--size-gutter)',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        backgroundColor: isDarkMode ? '#333' : 'white',
-        color: isDarkMode ? 'white' : 'black',
-        width: '100%',
-        borderBottom: `1px solid ${isDarkMode ? '#555' : '#ddd'}`,
-      }}
-    >
-      <Link to="/" style={{ display: 'flex', alignItems: 'center' }}>
+    <header className={`header ${isDarkMode ? "dark-mode" : ""}`}>
+      <Link to="/" className="logo-link">
         <StaticImage
           src="../images/pn.png"
           loading="eager"
           width={90}
           quality={95}
-          formats={['auto', 'webp', 'avif']}
+          formats={["auto", "webp", "avif"]}
           alt="Logo PN"
-          style={{ marginRight: 'var(--space-3)' }}
+          className="logo"
         />
       </Link>
 
-      <nav style={{ display: 'flex', alignItems: 'center' }}>
-        <Link to="/formulario" style={{ margin: '0 1rem', textDecoration: 'none', color: isDarkMode ? 'white' : 'black' }}>
-          Acceso Empleados
-        </Link>
+      <nav className="nav">
+        <div className="nav-item">
+          <Link to="/formulario">Acceso Empleados</Link>
+        </div>
         {tandemNombre && (
           <>
-            <span style={{ margin: '0 0.5rem' }}>|</span>
-            <Link to="/page-2" style={{ margin: '0 1rem', textDecoration: 'none', color: isDarkMode ? 'white' : 'black' }}>
-              Generador de QR
-            </Link>
-            <span style={{ margin: '0 0.5rem' }}>|</span>
-            <Link to="/profile" style={{ margin: '0 1rem', textDecoration: 'none', color: isDarkMode ? 'white' : 'black' }}>
-              Perfil
-            </Link>
-            <span style={{ margin: '0 0.5rem' }}>|</span>
-            <Link to="/page-3" style={{ margin: '0 1rem', textDecoration: 'none', color: isDarkMode ? 'white' : 'black' }}>
-              Información Institucional
-            </Link>
-            <span style={{ margin: '0 0.5rem' }}>|</span>
-            <Link to="/p-soporte" style={{ margin: '0 1rem', textDecoration: 'none', color: isDarkMode ? 'white' : 'black' }}>
-              Soporte Técnico
-            </Link>
-            <span style={{ margin: '0 0.5rem' }}>|</span>
-            <Link to="/list-qr" style={{ margin: '0 1rem', textDecoration: 'none', color: isDarkMode ? 'white' : 'black' }}>
-              Lista QR
-            </Link>
-            {tandemRole === 'admin' && (
-              <>
-                <span style={{ margin: '0 0.5rem' }}>|</span>
-                <Link to="/admin-user" style={{ margin: '0 1rem', textDecoration: 'none', color: isDarkMode ? 'white' : 'black' }}>
-                  Admin User
-                </Link>
-              </>
+            <div className="nav-item">
+              <Link to="/page-2">Generador de QR</Link>
+            </div>
+            <div className="nav-item">
+              <Link to="/profile">Perfil</Link>
+            </div>
+            <div className="nav-item">
+              <Link to="/page-3">Información Institucional</Link>
+            </div>
+            <div className="nav-item">
+              <Link to="/p-soporte">Soporte Técnico</Link>
+            </div>
+            <div className="nav-item">
+              <Link to="/list-qr">Lista QR</Link>
+            </div>
+            {tandemRole === "admin" && (
+              <div className="nav-item">
+                <Link to="/admin-user">Admin User</Link>
+              </div>
             )}
           </>
         )}
       </nav>
 
-      {/* boton oscuro claro */}
-      <button
-          onClick={toggleDarkMode}
-          style={{
-            border: 'none',
-            background: 'none',
-            cursor: 'pointer',
-            color: isDarkMode ? 'white' : 'black'
-          }}
-        >
-          {isDarkMode ? '🌞' : '🌜'}
+      <div className="right-section">
+        <button onClick={toggleDarkMode} className="dark-mode-toggle">
+          {isDarkMode ? "🌞" : "🌜"}
         </button>
 
-      
-      <div style={{ display: 'flex', alignItems: 'center' }}>
-        {tandemNombre ? (
-          <>
-            <p style={{ marginRight: '1rem' }}>
-              ¡Bienvenido, {tandemNombre}!
-            </p>
-            <button
-              onClick={handleLogout}
-              style={{ border: 'none', background: 'none', cursor: 'pointer', marginRight: '1rem' }}
-            >
-              <img
-                src={logoutIcon}
-                alt="Logout"
-                style={{ width: '24px', height: '24px' }}
-              />
-            </button>
-          </>
-        ) : (
-          <Link
-            to="/formulario"
-            style={{ marginLeft: 'auto', textDecoration: 'none', color: isDarkMode ? 'white' : 'black' }}
-          >
-            Iniciar Sesión
-          </Link>
-        )}
-        
+        <div className="user-section">
+          {tandemNombre ? (
+            <>
+              <p>¡Bienvenido, {tandemNombre}!</p>
+              <button onClick={handleLogout} className="logout-button">
+                <img src={logoutIcon} alt="Logout" className="logout-icon" />
+              </button>
+            </>
+          ) : (
+            <Link to="/formulario" className="login-link">
+              Iniciar Sesión
+            </Link>
+          )}
+        </div>
       </div>
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

@@ -20,7 +20,7 @@ const Registro = () => {
   const handleRegistro = async () => {
     try {
       const response = await fetch(
-        "http://localhost/api-qr-tandem/v1/register-user.php",
+        "https://andra.tandempatrimonionacional.eu/api-qr-tandem/v1/register-user.php",
         {
           method: "POST",
           headers: {

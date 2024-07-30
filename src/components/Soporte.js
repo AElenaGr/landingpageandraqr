@@ -10,7 +10,7 @@ const Soporte = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost/api-qr-tandem/v1/email-soporte.php', {
+      const response = await fetch('https://andra.tandempatrimonionacional.eu/api-qr-tandem/v1/email-soporte.php', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

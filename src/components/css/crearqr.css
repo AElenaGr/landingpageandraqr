@@ -1,0 +1,107 @@
+.crearqr-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 80vh;
+  background-color: rgba(240, 240, 240, 0.9);
+  padding: 20px;
+  border-radius: 35px;
+  border: 2px solid #F99194;
+  box-sizing: border-box;
+}
+
+.tituloqr {
+  font-size: 2rem;
+  color: #333;
+}
+
+.input-container {
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.input-field {
+  padding: 8px;
+  border-radius: 7px;
+  border: 2px solid #ccc;
+  font-size: 16px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.textarea {
+  resize: none;
+}
+
+.qr-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.qr-code {
+  display: inline-block;
+  margin: auto;
+}
+
+.qr-value {
+  font-size: 16px;
+  color: #333;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+.save-button {
+  margin-top: 10px;
+}
+
+.error-message {
+  color: #d9534f;
+  margin-top: 10px;
+}
+
+.success-message {
+  color: #5bc0de;
+  margin-top: 10px;
+}
+
+
+/* Añadir o actualizar estas reglas en tu archivo CSS */
+.controls-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px; /* Ajusta el espacio según sea necesario */
+}
+
+.color-picker,
+.size-picker {
+  margin-right: 10px; /* Ajusta el espacio entre controles */
+}
+
+/* Asegúrate de que los botones se alineen correctamente */
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
