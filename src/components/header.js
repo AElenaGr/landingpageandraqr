@@ -58,9 +58,7 @@ const Header = () => {
             <div className="nav-item">
               <Link to="/profile">Perfil</Link>
             </div>
-            <div className="nav-item">
-              <Link to="/page-3">Información Institucional</Link>
-            </div>
+            
             <div className="nav-item">
               <Link to="/p-soporte">Soporte Técnico</Link>
             </div>

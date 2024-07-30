@@ -29,6 +29,11 @@ const Footer = () => {
             <Link className="a" to="/contacto">
               Contacto
             </Link>
+            {" "} |{" "}
+            <Link className="a" to="/page-3">
+            Información Institucional
+            </Link>
+            
           </div>
           <div className="footer-left">
             <span>© {new Date().getFullYear()} &middot; </span>
