@@ -45,14 +45,14 @@ const Profile = () => {
               <span className="profile-label">Id:</span>
               <span className="profile-data">{tandemId}</span>
             </div>
-            <div className="profile-item">
+            {/* <div className="profile-item">
               <span className="profile-label">Delegación:</span>
               <span className="profile-data">{tandemDelegacion}</span>
             </div>
             <div className="profile-item">
               <span className="profile-label">Contraseña:</span>
               <span className="profile-data">{tandemContrasena}</span>
-            </div>
+            </div> */}
             <div className="profile-item">
               <a href="/contrasenia" role="button" className="aform">Cambiar contraseña</a>
             </div>

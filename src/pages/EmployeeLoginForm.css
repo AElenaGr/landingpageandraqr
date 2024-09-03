@@ -1,63 +1,82 @@
 .login-form-container {
   display: flex;
-  justify-content: center; /* Centrar el contenedor horizontalmente */
+  justify-content: center;
   align-items: center;
-  height: 100vh; /* Asegurar que el contenedor ocupa toda la altura de la ventana */
-  color: black; /* Cambiar el color del texto a negro */
-  font-weight: bold; /* Hacer el texto en negrita */
-  font-family: 'Times New Roman', Times, serif; /* Cambiar la fuente a Times New Roman */
+  height: 100vh;
+  background-color: var(--color-palette-accent-100); /* Fondo suave que coincide con el estilo */
+  font-family: var(--font-stack, "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif);
 }
 
 .login-form {
-  padding: 4rem;
-  padding-bottom: 6rem;
-  border-radius: 8px;
-  background-color: #ACACAD;
-  border: 3px solid #43381b;
-  box-shadow: 5px 5px rgba(0, 0, 0, 0.3);
-  margin-right: 0; /* Eliminar margen derecho */
+  padding: 3rem;
+  padding-bottom: 5rem;
+  border-radius: 12px;
+  background-color: var(--color-background-subtle-weak); /* Fondo de formulario acorde al tema */
+  border: 1px solid var(--color-palette-neutral-200);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  text-align: center;
 }
 
-.login-form h2 {
-  margin-bottom: 1rem;
-  text-align: center;
+.login-form h3 {
+  font-size: 1.5rem;
+  color: var(--color-text-main);
+  margin-bottom: 1.5rem;
+  font-weight: 600;
 }
 
 .login-form label {
   display: block;
+  font-size: 1rem;
+  color: var(--color-text-subtle);
   margin-bottom: 0.5rem;
+  text-align: left;
 }
 
 .login-form input {
   width: 100%;
-  padding: 0.5rem;
+  padding: 0.75rem;
   margin-bottom: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  background-color: #fff;
+  border: 1px solid var(--color-palette-neutral-200);
+  border-radius: 8px;
+  font-size: 1rem;
 }
 
-.login-form button {
-  margin-top: 2rem;
-  width: 100%;
-  padding: 0.5rem;
-  background-color: #6C25B3;
-  color: white;
+.login-form .buform {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--primary-color);
+  color: #fff;
   border: none;
-  border-radius: 4px;
+  border-radius: 8px;
+  font-size: 1rem;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.login-form button:hover {
-  background-color: #616222;
+.login-form .buform:hover {
+  background-color: var(--primary-color-dark);
 }
 
-.register-link {
-  color: white;
+/* Estilo para el enlace de "¿Olvidaste tu contraseña?" y "Registrarse" */
+.login-form .aform {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  color: #ffffff; /* Texto blanco */
+  text-decoration: none;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  padding: 0.25rem 0.5rem; /* Espaciado interno para el efecto de hover */
+  border-radius: 4px; /* Bordes redondeados */
 }
 
-@media (max-width: 400px) {
-  .login-form {
-    margin-right: 0.5%;
-  }
+.login-form .aform:hover {
+  color: #000000; /* Texto negro al pasar el ratón */
+  background-color: #ffffff; /* Fondo blanco al pasar el ratón */
+  text-decoration: none;
+}
+
+.login-form p {
+  color: var(--color-text-danger);
+  font-size: 1rem;
+  margin-top: 1rem;
 }

@@ -1,46 +1,142 @@
-.cardStylo {
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 16px;
-  text-align: center;
-  max-width: 300px;
-  margin: 16px auto;
+/* General layout styling */
+.layout {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #ffffff; /* Fondo blanco para un diseño limpio */
 }
 
+/* Title styling */
+.titulo {
+  text-align: center;
+  margin-bottom: 24px;
+  font-size: 2.5em; /* Tamaño de fuente más grande para títulos destacados */
+  color: #2c3e50; /* Color gris oscuro para el título */
+  font-weight: 400; /* Peso de fuente normal para una apariencia más clásica */
+}
+
+/* Card styling */
+.cardStylo {
+  border: 1px solid #dcdcdc; /* Borde gris claro para un estilo más sobrio */
+  border-radius: 8px; /* Bordes más redondeados para una apariencia suave */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera para dar profundidad */
+  padding: 20px;
+  text-align: center;
+  max-width: 320px;
+  margin: 20px auto;
+  background-color: #ffffff; /* Fondo blanco para las tarjetas */
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.cardStylo:hover {
+  transform: translateY(-6px); /* Menos desplazamiento en hover para un efecto sutil */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada en hover */
+}
+
+/* Image styling */
 .cardImage {
   max-width: 100%;
-  border-radius: 8px;
+  border-radius: 6px; /* Bordes redondeados en imágenes */
+  margin-bottom: 16px;
+  transition: transform 0.2s ease-in-out;
 }
 
-.layout {
-  padding: 16px;
+.cardStylo:hover .cardImage {
+  transform: scale(1.03); /* Escalado sutil en hover */
 }
 
+/* Content area styling */
 .content {
   display: flex;
-  align-items: flex-start; /* Align items to the start of the container */
-  justify-content: space-between; /* Distribute space between items */
-  background-color: #c8d1e0;
+  align-items: flex-start;
+  justify-content: space-between;
+  background-color: #f0f0f0; /* Fondo gris claro para el área de contenido */
+  padding: 20px;
+  border-radius: 8px; /* Bordes más redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Flexbox children */
 .content > div {
   flex: 1;
   margin: 16px;
 }
 
-.titulo {
-  text-align: center;
-  margin-bottom: 16px;
+/* Form styling */
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
-/* Media Query for screens smaller than 768px */
+form label {
+  font-weight: bold;
+  margin-bottom: 4px;
+  display: block;
+  text-align: left;
+  color: #34495e; /* Color gris oscuro para las etiquetas */
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px; /* Bordes redondeados en campos de formulario */
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 1em;
+  transition: border-color 0.2s;
+}
+
+form input:focus, form textarea:focus {
+  border-color: #3498db; /* Borde azul para el enfoque */
+  outline: none;
+}
+
+form textarea {
+  resize: vertical;
+  height: 120px;
+}
+
+/* Media Query for responsive design */
 @media (max-width: 768px) {
   .content {
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items horizontally */
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
   }
 
   .content > div {
-    margin: 16px 0; /* Add vertical margin */
+    margin: 16px 0;
+  }
+
+  .cardStylo {
+    max-width: 100%;
+    margin: 16px 0;
+  }
+
+  form {
+    width: 100%;
+    padding: 0 16px;
+  }
+}
+
+/* Media Query for very small screens */
+@media (max-width: 480px) {
+  .titulo {
+    font-size: 1.8em; /* Ajuste del tamaño del título en pantallas muy pequeñas */
+  }
+
+  .layout {
+    padding: 10px;
+  }
+
+  .content {
+    padding: 10px;
+  }
+
+  form {
+    padding: 0 8px;
   }
 }

@@ -4,17 +4,50 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.7); /* Fondo blanco semi-translúcido */
   color: black;
   width: 100%;
   border-bottom: 1px solid #ddd;
+  background-image: url("../../images/header-background.jpg"); /* Ruta corregida */
+  background-size: cover;
+  background-position: center;
+  position: relative; /* Asegura que la pseudo-capa se posicione correctamente */
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* Capa de superposición negra con opacidad para disminuir la intensidad de la imagen de fondo */
+  z-index: -1; /* Asegura que la capa de superposición esté detrás del contenido del encabezado */
 }
 
 .header.dark-mode {
-  background-color: #333;
-  color: white;
-  border-bottom: 1px solid #555;
+  background-color: #333; /* Fondo oscuro */
+  color: white; /* Color del texto en modo oscuro */
+  border-bottom: 1px solid #555; /* Borde inferior gris oscuro */
+  position: relative; /* Para que la capa de superposición se posicione correctamente */
 }
+
+.header.dark-mode::before {
+  background: rgba(0, 0, 0, 0.6); /* Capa de superposición más oscura en modo oscuro */
+}
+
+.header.dark-mode .logo {
+  filter: brightness(1.2); /* Aumenta el brillo del logo si es necesario */
+}
+
+.header.dark-mode .nav-item a {
+  color: white; /* Color del texto en los enlaces */
+}
+
+.header.dark-mode .nav-item a:hover {
+  color: #ccc; /* Color del texto en los enlaces al pasar el cursor */
+}
+
 
 .logo-link {
   display: flex;
@@ -31,13 +64,15 @@
 }
 
 .nav-item {
-  margin: 0 1rem;
+  margin: 0 2rem; /* Aumenta el margen entre los ítems del menú */
+  padding: 0.5rem 1rem; /* Añade padding alrededor del texto para mejorar la legibilidad */
 }
 
 .nav-item a {
   text-decoration: none;
   color: inherit;
   transition: color 0.3s ease;
+  font-size: 1rem; /* Ajusta el tamaño de la fuente según sea necesario */
 }
 
 .nav-item a:hover {
@@ -54,7 +89,7 @@
   background: none;
   cursor: pointer;
   color: inherit;
-  margin-right: 1rem;
+  margin-right: 2rem; /* Aumenta el margen a la derecha del toggle de modo oscuro */
   font-size: 1.5rem;
 }
 
@@ -64,7 +99,7 @@
 }
 
 .user-section p {
-  margin-right: 1rem;
+  margin-right: 1.5rem; /* Aumenta el margen a la derecha del texto del usuario */
 }
 
 .logout-button {

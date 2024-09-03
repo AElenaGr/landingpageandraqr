@@ -31,11 +31,21 @@
     "react-leaflet": "^4.2.1",
     "react-qrious": "^2.5.6",
     "react-share": "^5.1.0",
+    "react-slick": "^0.30.2",
     "reactstrap": "^9.2.2",
-    "styled-components": "^6.1.11"
+    "slick-carousel": "^1.8.1",
+    "styled-components": "^6.1.11",
+    "swiper": "^11.1.10"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^6.5.0",
+    "@testing-library/react": "^16.0.0",
+    "babel-jest": "^29.7.0",
+    "babel-preset-gatsby": "^3.13.2",
     "css-loader": "^7.1.2",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
     "prettier": "^2.8.8",
     "style-loader": "^4.0.0"
   },
@@ -50,7 +60,7 @@
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",

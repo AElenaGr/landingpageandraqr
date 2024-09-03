@@ -1,40 +1,98 @@
+/* Contenedor principal de la tabla */
 .tablaqr {
-  margin: 20px auto;
-  width: 80%;
-  max-width: 1200px;
+  margin: 20px auto; /* Centra horizontalmente el contenedor */
+  width: 100%; /* Ajusta el ancho para adaptarse mejor a pantallas grandes */
+  max-width: 1200px; /* Ancho máximo para pantallas grandes */
   text-align: center; /* Asegura que el contenido esté centrado */
 }
 
+/* Encabezado de la tabla */
 .tablaqr h2 {
   margin-bottom: 20px;
-  text-align: center; /* Centra el encabezado */
+  text-align: center; /* Centra el título */
+  color: #333333; /* Color de texto para el encabezado */
+  font-size: 24px; /* Tamaño de fuente del encabezado */
+  font-weight: 700; /* Peso de fuente más fuerte */
 }
 
+/* Tabla */
 .tablaqr table {
   width: 100%;
   border-collapse: collapse;
-  border: 1px solid #f7c0c0;
   margin: 0 auto; /* Centra la tabla dentro del contenedor */
+  box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para un efecto elegante */
 }
 
+/* Celdas de la tabla */
 .tablaqr th, .tablaqr td {
-  border: 1px solid #ddd;
-  padding: 8px;
+  border: 1px solid #dcdcdc; /* Borde gris claro */
+  padding: 5px; /* Espaciado interno más amplio */
   text-align: left;
+  font-size: 14px; /* Tamaño de fuente de las celdas */
 }
 
+/* Encabezado de la tabla */
 .tablaqr th {
-  background-color: #C3C3C6;
+  background-color: #f0f0f0; /* Fondo gris muy claro para el encabezado */
+  color: #333333; /* Color de texto del encabezado */
+  font-weight: 700; /* Peso de fuente del encabezado */
 }
 
+/* Filas alternas */
 .tablaqr tr:nth-child(even) {
-  background-color: #f9f9f9;
+  background-color: #f9f9f9; /* Fondo gris claro para filas pares */
 }
 
+/* Efecto al pasar el ratón sobre las filas */
 .tablaqr tr:hover {
-  background-color: #f1f1f1;
+  background-color: #e9e9e9; /* Fondo gris ligeramente más oscuro */
 }
 
+/* Celda para el código QR */
 .qr-code-cell {
   width: 100px; /* Ajusta el ancho según sea necesario */
+  text-align: center; /* Centra el contenido dentro de la celda */
+}
+
+h2{
+  text-align: center;
+}
+
+/* Media Query para pantallas de tamaño mediano (tabletas) */
+@media (max-width: 1024px) {
+  .tablaqr {
+    width: 95%; /* Aumenta el ancho del contenedor en pantallas más pequeñas */
+  }
+
+  .tablaqr th, .tablaqr td {
+    font-size: 14px; /* Reduce el tamaño de fuente en pantallas más pequeñas */
+    padding: 10px; /* Reduce el espaciado interno */
+  }
+
+  .qr-code-cell {
+    width: 80px; /* Ajusta el ancho del código QR en pantallas más pequeñas */
+  }
+}
+
+/* Media Query para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+  .tablaqr {
+    width: 100%; /* Asegura que la tabla ocupe el ancho completo del contenedor */
+  }
+
+  .tablaqr th, .tablaqr td {
+    font-size: 12px; /* Reduce aún más el tamaño de fuente */
+    padding: 8px; /* Reduce el espaciado interno */
+    display: block; /* Cambia a bloque para mejor adaptabilidad en pantallas pequeñas */
+    width: 100%; /* Asegura que las celdas ocupen el ancho completo */
+  }
+
+  .tablaqr td {
+    text-align: center; /* Centra el texto en las celdas en pantallas pequeñas */
+    margin-bottom: 10px; /* Añade espacio entre las celdas */
+  }
+
+  .qr-code-cell {
+    width: 60px; /* Ajusta el ancho del código QR para pantallas muy pequeñas */
+  }
 }

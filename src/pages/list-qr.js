@@ -51,7 +51,7 @@ const QrCodeList = () => {
         <table>
           <thead>
             <tr>
-              <th>QR</th>
+              <th className="qr-code-cell">QR</th>
               <th>ID</th>
               <th>Data</th>
               <th>Nombre Referencia</th>

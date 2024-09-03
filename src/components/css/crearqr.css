@@ -1,20 +1,35 @@
+/* General Styles */
+body, html {
+  font-family: Georgia, serif;
+  font-size: 16px;
+  color: #282828;
+  background-color: #f5f5f5; /* Color de fondo similar al del sitio */
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Container for QR code generation */
 .crearqr-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 80vh;
-  background-color: rgba(240, 240, 240, 0.9);
+  background-color: #ffffff; /* Fondo blanco para mayor claridad */
   padding: 20px;
-  border-radius: 35px;
-  border: 2px solid #F99194;
+  border-radius: 10px; /* Bordes más suaves para un look clásico */
+  border: 1px solid #dcdcdc; /* Borde gris claro */
   box-sizing: border-box;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera para dar profundidad */
 }
 
+/* Title styling */
 .tituloqr {
   font-size: 2rem;
-  color: #333;
+  color: #333333;
+  margin-bottom: 20px;
 }
 
+/* Input styles */
 .input-container {
   margin-bottom: 20px;
   width: 100%;
@@ -22,18 +37,20 @@
 }
 
 .input-field {
-  padding: 8px;
-  border-radius: 7px;
-  border: 2px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
   font-size: 16px;
   width: 100%;
   margin-bottom: 10px;
 }
 
 .textarea {
-  resize: none;
+  resize: vertical; /* Permitir solo redimensionar verticalmente */
+  min-height: 100px; /* Altura mínima para el área de texto */
 }
 
+/* QR code container */
 .qr-container {
   text-align: center;
   margin: 20px 0;
@@ -44,64 +61,73 @@
   margin: auto;
 }
 
+/* QR code value styling */
 .qr-value {
   font-size: 16px;
-  color: #333;
+  color: #333333;
 }
 
+/* Button styling */
 .button-container {
   display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin: 20px 0;
+  justify-content: space-between;
+  margin-top: 20px;
 }
 
 .button {
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: #007bff; /* Color primario del botón */
   color: #ffffff;
-  border: none;
-  border-radius: 8px;
+  border: 1px solid #007bff; /* Borde del mismo color que el fondo */
+  border-radius: 5px; /* Bordes más suaves */
   font-size: 14px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .button:hover {
   background-color: #0056b3;
+  border-color: #0056b3;
 }
 
 .save-button {
   margin-top: 10px;
 }
 
+/* Error and success messages */
 .error-message {
-  color: #d9534f;
+  color: #b41400; /* Color rojo para errores */
   margin-top: 10px;
 }
 
 .success-message {
-  color: #5bc0de;
+  color: #28a745; /* Color verde para mensajes de éxito */
   margin-top: 10px;
 }
 
-
-/* Añadir o actualizar estas reglas en tu archivo CSS */
+/* Controls container styling */
 .controls-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px; /* Ajusta el espacio según sea necesario */
+  margin-bottom: 20px;
 }
 
 .color-picker,
 .size-picker {
-  margin-right: 10px; /* Ajusta el espacio entre controles */
+  margin-right: 10px;
 }
 
-/* Asegúrate de que los botones se alineen correctamente */
-.button-container {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f5f5f5;
 }

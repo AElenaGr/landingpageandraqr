@@ -14,7 +14,7 @@ const SoportePage = () => (
       </h1>
       <div className="content">
         <Soporte />
-        <CardStylo
+        {/* <CardStylo
           titulo="Mi tarjeta Genial"
           descripcion="Esto es el contenido de la tarjeta"
           url="https://upload.wikimedia.org/wikipedia/commons/4/49/Palacio_Real_de_Aranjuez_%285%29.jpg"
@@ -23,7 +23,7 @@ const SoportePage = () => (
           titulo="Mi tarjeta Genial"
           descripcion="Esto es el contenido de la tarjeta"
           url="https://upload.wikimedia.org/wikipedia/commons/4/49/Palacio_Real_de_Aranjuez_%285%29.jpg"
-        />
+        /> */}
       </div>
     </div>
   </Layout>

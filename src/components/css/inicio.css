@@ -1,0 +1,72 @@
+/* Estilo del contenedor del slider */
+.slider-container {
+  position: relative;
+  width: 100%;
+  height: 100%; /* Ocupa el espacio completo entre el header y el footer */
+  overflow: hidden; /* Oculta el contenido que se sale del contenedor */
+  background-color: #f5f5f5; /* Fondo claro para el slider */
+}
+
+/* Estilo del slider */
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out; /* Transición suave entre slides */
+}
+
+/* Estilo de cada slide */
+.slide {
+  min-width: 100%; /* Cada slide ocupa el ancho completo del contenedor */
+  box-sizing: border-box;
+  background-color: #ffffff; /* Fondo blanco para cada slide */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  overflow: hidden; /* Oculta el contenido que se sale del slide */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilo para el contenido del slide */
+.slide-content {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Estilo del título dentro del slide */
+.slide-title {
+  font-size: 2em;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+/* Estilo del texto dentro del slide */
+.slide-text {
+  font-size: 1.2em;
+  color: #34495e;
+}
+
+/* Controles del slider */
+.slider-controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+/* Botones de control del slider */
+.slider-controls button {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.5em;
+  transition: background-color 0.3s ease;
+}
+
+.slider-controls button:hover {
+  background-color: #0056b3;
+}

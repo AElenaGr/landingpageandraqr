@@ -2,11 +2,14 @@ import React, { useEffect, useState } from 'react';
 import './css/TablaUsuarios.css'; // Archivo CSS para estilos de la tabla
 import UpdateUser from './UpdateUser';
 import defaultAvatar from '../images/user.png'; // Importa la imagen predeterminada
+import { Refresh } from '@mui/icons-material';
+import EditarRole from './editarRole';
 
 function TablaUsuarios({ url }) {
   const [users, setUsers] = useState([]);
   const [message, setMessage] = useState('');
   const [editingUser, setEditingUser] = useState(null);
+  const [refresh, setRefresh] = useState(false);
 
   useEffect(() => {
     const fetchUsers = async () => {
@@ -23,20 +26,28 @@ function TablaUsuarios({ url }) {
         const data = await response.json();
         setUsers(data.users);
         setMessage(data.message);
+        setRefresh(true)
+        handleUserUpdated();
       } catch (error) {
         console.error('Error al buscar la lista de usuarios', error);
       }
     };
     fetchUsers();
-  }, [url]);
+  }, [url, refresh]);
 
   const handleEditUser = (user) => {
     setEditingUser(user);
   };
 
+  const handleUserUpdated = () => {
+    setRefresh(!refresh); // Cambia el estado de refresh para desencadenar useEffect
+  };
+
   const handleCloseModal = () => {
     setEditingUser(null);
   };
+
+
 
   const handleUpdateUser = async (email, updatedData) => {
     try {
@@ -96,7 +107,8 @@ function TablaUsuarios({ url }) {
           <p>Delegación: {user.delegacion}</p>
           <p>Rol: {user.role}</p>
           <button onClick={() => handleEditUser(user)}>Editar Usuario</button>
-          <button onClick={() => handleDeleteUser(user.email)}>Eliminar Usuario</button>
+          <button onClick={() => handleDeleteUser(user.email)} onUserUpdated={handleUserUpdated}>Eliminar Usuario</button>
+          <EditarRole emaill={user.email} rolee={user.role} onUserUpdated={handleUserUpdated} />
         </div>
       ))}
       {editingUser && (

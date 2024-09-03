@@ -1,0 +1,142 @@
+/* Estilo general del contenedor */
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Asegura que el contenedor ocupe al menos toda la altura de la ventana */
+}
+
+/* Estilo del header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f5f5f5;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  margin-right: 20px;
+}
+
+/* Estilo del título */
+.title {
+  font-size: 3em; /* Aumenta el tamaño del texto */
+  color: #3498db; /* Un color azul vibrante */
+  margin: 0;
+  font-family: 'Montserrat', sans-serif; /* Fuente elegante */
+  text-transform: uppercase; /* Todo en mayúsculas */
+  letter-spacing: 2px; /* Espaciado entre letras */
+  text-align: center; /* Centrar el texto */
+  position: relative; /* Posicionamiento relativo para el efecto de sombra */
+}
+
+/* Efecto de sombra bajo el texto */
+.title::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -10px; /* Posición de la sombra */
+  transform: translateX(-50%);
+  width: 60%;
+  height: 4px;
+  background-color: #2980b9; /* Color de la sombra */
+  border-radius: 2px; /* Esquinas redondeadas para la sombra */
+}
+
+/* Añadir un gradiente en el texto */
+.title {
+  background: linear-gradient(90deg, #3498db, #8e44ad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Sombra adicional para hacer el texto más legible */
+.title {
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Estilo del contenido principal */
+.main-content {
+  flex: 1; /* Ocupa el espacio restante entre el header y el footer */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0; /* Elimina el padding para que el slider ocupe todo el espacio */
+}
+
+/* Estilo del contenedor del carousel */
+.carousel-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden; /* Oculta cualquier contenido que se salga del contenedor */
+}
+
+/* Estilo del slider */
+.slider-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #f5f5f5;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  height: 100vh; /* Hace que el slide ocupe toda la pantalla */
+  box-sizing: border-box;
+  background-color: #ffffff;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta la imagen para que cubra todo el slide sin distorsión */
+}
+
+/* Controles del slider */
+.slider-controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.slider-controls button {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.5em;
+  transition: background-color 0.3s ease;
+}
+
+.slider-controls button:hover {
+  background-color: #0056b3;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.5em;
+  }
+
+  .slide {
+    height: 100vh; /* Asegura que el slide ocupe toda la altura en pantallas pequeñas */
+  }
+}

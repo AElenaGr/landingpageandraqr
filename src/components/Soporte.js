@@ -37,7 +37,7 @@ const Soporte = () => {
 
   return (
     <div>
-      <h2>Contacto de Soporte Técnico</h2>
+      {/* <h2 className="left-align">Contacto de Soporte Técnico</h2> */}
       <form onSubmit={handleSubmit}>
         <label>Nombre:</label>
         <input

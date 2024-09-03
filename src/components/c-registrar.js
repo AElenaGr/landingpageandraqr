@@ -67,11 +67,11 @@ const Registro = () => {
       <label htmlFor="delegacion">Delegación:</label>
       <select id="delegacion" value={delegacion} onChange={handleDelegacion}>
         <option value="">Selecciona tu delegación</option>
-        <option value="Delegacion1">Aranjuez - Madrid</option>
-        <option value="Delegacion2">El Pardo - Madrid </option>
-        <option value="Delegacion3">San Ildefonso - Segovia</option>
-        <option value="Delegacion3">San Jerónimo de Yuste - Cáceres</option>
-        <option value="Delegacion3"> San Lorenzo de El Escorial - Madrid</option>
+        <option value="Aranjuez">Aranjuez - Madrid</option>
+        <option value="El Pardo">El Pardo - Madrid </option>
+        <option value="San Ildefonso - Segovia">San Ildefonso - Segovia</option>
+        <option value="San Jerónimo de Yuste - Cáceres">San Jerónimo de Yuste - Cáceres</option>
+        <option value="San Lorenzo de El Escorial - Madrid"> San Lorenzo de El Escorial - Madrid</option>
         {/* Añade más opciones según sea necesario */}
       </select>
       <label htmlFor="email">Email:</label>

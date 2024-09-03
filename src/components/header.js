@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import logoutIcon from "../images/logout-icon.png"
-import "./css/header.css"
+import "../components/css/header.css"
 
 const Header = () => {
   const [tandemNombre, setTandemNombre] = useState("")
@@ -58,7 +58,6 @@ const Header = () => {
             <div className="nav-item">
               <Link to="/profile">Perfil</Link>
             </div>
-            
             <div className="nav-item">
               <Link to="/p-soporte">Soporte Técnico</Link>
             </div>
