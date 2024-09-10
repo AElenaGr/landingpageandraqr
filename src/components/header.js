@@ -35,15 +35,17 @@ const Header = () => {
   return (
     <header className={`header ${isDarkMode ? "dark-mode" : ""}`}>
       <Link to="/" className="logo-link">
-        <StaticImage
-          src="../images/pn.png"
-          loading="eager"
-          width={90}
-          quality={95}
-          formats={["auto", "webp", "avif"]}
-          alt="Logo PN"
-          className="logo"
-        />
+      <StaticImage
+  src="../images/pn.png"
+  loading="eager"
+  width={180} /* Ajusta el tamaño del logo aquí */
+  quality={95}
+  formats={["auto", "webp", "avif"]}
+  alt="Logo PN"
+  className="logo"
+/>
+
+
       </Link>
 
       <nav className="nav">
